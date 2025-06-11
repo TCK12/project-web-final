@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Du lịch Đà Nẵng - BWD2025</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+  <link rel="stylesheet" href="css/handbook.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/modal.css">
+  <script src="js/handbook.js"></script>
+
+</head>
+<!-- Popup Login Modal -->
+<div id="loginModal" class="modal">
+  <div class="modal-content">
+    <span class="close-modal">&times;</span>
+    <h2>Đăng nhập tài khoản</h2>
+    <form id="loginForm" autocomplete="off">
+      <div class="form-group">
+        <label for="username"><i class="fa-regular fa-user"></i> Tên đăng nhập</label>
+        <input type="text" id="username" name="username" required placeholder="Nhập tên đăng nhập">
+      </div>
+      <div class="form-group">
+        <label for="password"><i class="fa-solid fa-lock"></i> Mật khẩu</label>
+        <input type="password" id="password" name="password" required placeholder="Nhập mật khẩu">
+      </div>
+      <button type="submit" class="login-submit-btn">Đăng nhập</button>
+    </form>
+    <div id="loginMessage" style="margin-top:12px;font-size:15px"></div>
+  </div>
+</div>
+
+<body>
+  <!-- Header -->
+  <div class="header">
+    <div class="logo">
+      <img src="C:\Users\manhh\OneDrive\Pictures\Screenshots\Ảnh chụp màn hình 2025-04-16 082125.png"
+        alt="DaNangTrip Logo">
+    </div>
+    <div class="right">
+      <span class="hotline"><i class="fa-solid fa-headset"></i>0788 0646 458</span>
+      <button class="login-btn">Đăng nhập</button>
+    </div>
+  </div>
+  <!-- Nav -->
+  <div class="navbar">
+    <div class="nav-item active">
+      <a href="index.html" style="text-decoration: none; color: inherit;">
+        <i class="fa-solid fa-book"></i>Cẩm nang
+      </a>
+    </div>
+    <a class="nav-item" href="hotel.html"><i class="fa-solid fa-building"></i>Khách sạn</a>
+    <a class="nav-item" href="travel.html"><i class="fa-solid fa-suitcase-rolling"></i>Combo du lịch</a>
+    <a class="nav-item" href="support.html"><i class="fa-solid fa-headset"></i>Hỗ trợ khách hàng</a>
+  </div>
+  <!-- Banner -->
+  <div class="banner">
+    <div class="banner-title">Đà Nẵng</div>
+  </div>
+  <!-- Main content -->
+  <div class="main-content">
+    <h1>Tại Sao Nên Đi Du Lịch Đà Nẵng Ngay Trong Tháng 4</h1>
+    <p>
+      Đà Nẵng, thành phố biển xinh đẹp của miền Trung Việt Nam, luôn là điểm đến hấp dẫn cho du khách trong và ngoài
+      nước. Tuy nhiên, tháng 4 là thời điểm đặc biệt để khám phá nơi đây. Dưới đây là những lý do thuyết phục bạn nên
+      lên kế hoạch cho chuyến du lịch Đà Nẵng vào tháng này.
+    </p>
+
+    <div class="highlight">
+      <strong>Thời tiết lý tưởng</strong>
+      <br>
+      Tháng 4 đánh dấu sự chuyển giao giữa mùa khô và mùa mưa ở Đà Nẵng. Thời tiết lúc này rất dễ chịu, với nhiệt độ
+      trung bình khoảng 25-30 độ C. Không khí trong lành, nắng nhẹ rất thích hợp cho các hoạt động ngoài trời như tắm
+      biển, tham quan và chụp ảnh. Bạn có thể thoải mái khám phá bãi biển Mỹ Khê nổi tiếng, một trong những bãi biển đẹp
+      nhất Việt Nam, với cát trắng mịn và làn nước trong xanh.
+    </div>
+
+    <div class="place">
+      <div class="place-icon"><i class="fa-solid fa-location-dot"></i></div>
+      <div class="place-content">
+        <h3>Địa điểm du lịch đa dạng</h3>
+        <p>
+          Đà Nẵng nổi bật với nhiều điểm tham quan hấp dẫn. Ngũ Hành Sơn, một quần thể núi đá vôi kỳ vĩ, là nơi bạn có
+          thể khám phá các hang động huyền bí và chiêm ngưỡng cảnh quan tuyệt đẹp từ trên cao. Cầu Vàng, với thiết kế
+          độc đáo, là một điểm đến không thể bỏ qua, nơi bạn có thể chụp những bức ảnh sống ảo tuyệt vời. Thêm vào đó,
+          Bà Nà Hills với khí hậu mát mẻ quanh năm và các trò chơi giải trí thú vị cũng là một lựa chọn hoàn hảo cho
+          chuyến đi của bạn.
+        </p>
+      </div>
+    </div>
+    <div class="post-img-center">
+      <img class="post-img" src="https://cdn.vntrip.vn/cam-nang/wp-content/uploads/2017/04/bai-bien-my-khe-da-nang.jpg"
+        alt="Bãi biển Mỹ Khê Đà Nẵng">
+    </div>
+
+    <div class="place">
+      <div class="place-icon"><i class="fa-solid fa-festival"></i></div>
+      <div class="place-content">
+        <h3>Lễ hội và sự kiện văn hóa</h3>
+        <p>
+          Tháng 4 không chỉ là thời điểm lý tưởng về thời tiết mà còn là thời gian diễn ra nhiều lễ hội văn hóa đặc sắc.
+          Bạn có thể tham gia các hoạt động truyền thống, thưởng thức ẩm thực địa phương và tìm hiểu về phong tục tập
+          quán của người dân nơi đây. Những sự kiện này sẽ mang đến cho bạn những trải nghiệm độc đáo và khó quên.
+        </p>
+      </div>
+    </div>
+    <div class="post-img-center">
+      <img class="post-img"
+        src="https://danangfantasticity.com/wp-content/uploads/2019/02/hoi-cho-am-thuc-Da-Nang-2019-4.jpg"
+        alt="Lễ hội ở Đà Nẵng">
+    </div>
+
+    <div class="place">
+      <div class="place-icon"><i class="fa-solid fa-bowl-food"></i></div>
+      <div class="place-content">
+        <h3>Ẩm thực phong phú</h3>
+        <p>
+          Đà Nẵng nổi tiếng với ẩm thực phong phú và đa dạng. Tháng 4 là thời điểm lý tưởng để thưởng thức các món ăn
+          đặc sản như mì Quảng, bánh tráng cuốn thịt heo, hay hải sản tươi sống. Những quán ăn ven biển luôn sẵn sàng
+          phục vụ bạn những món ngon với hương vị đặc trưng của miền Trung. Đừng quên ghé thăm các chợ đêm để trải
+          nghiệm không khí sôi động và nếm thử những món ăn vặt hấp dẫn.
+        </p>
+      </div>
+    </div>
+    <div class="post-img-center">
+      <img class="post-img" src="https://danangaz.com/wp-content/uploads/2019/03/am-thuc-da-nang.jpg"
+        alt="Ẩm thực Đà Nẵng">
+    </div>
+
+    <div class="place">
+      <div class="place-icon"><i class="fa-solid fa-building"></i></div>
+      <div class="place-content">
+        <h3>Hạ tầng du lịch phát triển</h3>
+        <p>
+          Với sự phát triển mạnh mẽ của ngành du lịch, Đà Nẵng ngày càng hoàn thiện về hạ tầng giao thông và dịch vụ. Hệ
+          thống khách sạn, nhà hàng và phương tiện di chuyển đa dạng giúp du khách dễ dàng lựa chọn và tận hưởng kỳ nghỉ
+          thoải mái. Bạn có thể tìm thấy nhiều lựa chọn phù hợp với ngân sách của mình, từ các khu nghỉ dưỡng sang trọng
+          đến những homestay thân thiện.
+        </p>
+      </div>
+    </div>
+    <div class="post-img-center">
+      <img class="post-img" src="https://dulichkhampha24.com/wp-content/uploads/2020/12/khach-san-5-sao-da-nang.jpg"
+        alt="Khách sạn Đà Nẵng">
+    </div>
+
+    <div class="highlight">
+      <strong>Kết luận</strong><br>
+      Tóm lại, tháng 4 là thời điểm lý tưởng để bạn trải nghiệm vẻ đẹp của Đà Nẵng. Với thời tiết dễ chịu, nhiều điểm
+      tham quan hấp dẫn, sự kiện văn hóa phong phú và ẩm thực đặc sắc, chuyến du lịch Đà Nẵng trong tháng này chắc chắn
+      sẽ mang đến cho bạn những kỷ niệm đáng nhớ. Hãy lên kế hoạch ngay để khám phá thành phố xinh đẹp này!
+    </div>
+  </div>
+</body>
+
+</html>

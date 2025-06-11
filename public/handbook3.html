@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
   <meta charset="UTF-8">
   <title>Du lịch Đà Nẵng - BWD2025</title>
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
-  <style>
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/handbook.css">
+  <link rel="stylesheet" href="css/modal.css">
+  <script src="js/handbook.js"></script>
+  <!-- <style>
     body {
       font-family: 'Roboto', Arial, sans-serif;
       background: #f6f7fb;
@@ -65,9 +70,6 @@
       position: relative;
     }
     .navbar .nav-item {
-  text-decoration: none; /* ← Thêm dòng này để xóa gạch chân */
-}
-    .navbar .nav-item {
       flex: 1;
       text-align: center;
       padding: 20px 0 14px 0;
@@ -94,6 +96,9 @@
       font-size: 28px;
       margin-bottom: 4px;
     }
+    .navbar .nav-item {
+  text-decoration: none; /* ← Thêm dòng này để xóa gạch chân */
+}
     .banner {
       width: 100%;
       height: 270px;
@@ -159,7 +164,7 @@
       font-weight: 500;
       font-size: 16px;
     }
-    .place {
+    .main-content .place {
       display: flex;
       align-items: flex-start;
       gap: 22px;
@@ -167,23 +172,28 @@
       border-bottom: 1px solid #f3e8d5;
       padding-bottom: 20px;
     }
-    .place:last-child {
+    .main-content .place:last-child {
       border-bottom: none;
       padding-bottom: 0;
     }
-    .place-icon {
+    .main-content .place-icon {
       font-size: 40px;
-      color: #ffa200;
+      color: #1a73e8;
       flex-shrink: 0;
       margin-top: 3px;
     }
-    .place-content {
+    .main-content .place-content {
       flex: 1;
+    }
+    .main-content .place-content .location {
+      font-size: 16px;
+      color: #666;
+      margin-bottom: 8px;
     }
     .post-img-center {
       display: flex;
       justify-content: center;
-      margin: 18px 0 28px 0;
+      margin: 22px 0;
     }
     .post-img {
       max-width: 100%;
@@ -210,15 +220,15 @@
         font-size: 15px;
         padding: 13px 0 9px 0;
       }
-      .place {
+      .main-content .place {
+        gap: 12px;
         flex-direction: column;
-        gap: 8px;
       }
-      .place-icon {
+      .main-content .place-icon {
         font-size: 32px;
       }
     }
-  </style>
+  </style> -->
 </head>
 <!-- Popup Login Modal -->
 <div id="loginModal" class="modal">
@@ -240,7 +250,7 @@
   </div>
 </div>
 
-<style>
+<!-- <style>
 /* Modal Background */
 .modal {
   display: none;
@@ -337,9 +347,9 @@
   .modal-content { max-width: 99vw; padding: 18px 7vw 14px 7vw;}
   .modal { padding: 0; }
 }
-</style>
+</style> -->
 
-<script>
+<!-- <script>
 document.addEventListener('DOMContentLoaded', function() {
   const modal = document.getElementById('loginModal');
   const btn = document.querySelector('.login-btn');
@@ -423,12 +433,14 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
 });
-</script>
+</script> -->
+
 <body>
   <!-- Header -->
   <div class="header">
     <div class="logo">
-      <img src="C:\Users\manhh\OneDrive\Pictures\Screenshots\Ảnh chụp màn hình 2025-04-16 082125.png" alt="DaNangTrip Logo">
+      <img src="C:\Users\manhh\OneDrive\Pictures\Screenshots\Ảnh chụp màn hình 2025-04-16 082125.png"
+        alt="DaNangTrip Logo">
     </div>
     <div class="right">
       <span class="hotline"><i class="fa-solid fa-headset"></i>0788 0646 458</span>
@@ -437,14 +449,14 @@ document.addEventListener('DOMContentLoaded', function() {
   </div>
   <!-- Nav -->
   <div class="navbar">
-      <div class="nav-item active">
-    <a href="trangchu.html" style="text-decoration: none; color: inherit;">
-      <i class="fa-solid fa-book"></i>Cẩm nang
-    </a>
-  </div>
-    <a class="nav-item" href="khachsan.html"><i class="fa-solid fa-building"></i>Khách sạn</a>
-    <a class="nav-item" href="combodulich.html"><i class="fa-solid fa-suitcase-rolling"></i>Combo du lịch</a>
-    <a class="nav-item" href="hotrokhachhang.html"><i class="fa-solid fa-headset"></i>Hỗ trợ khách hàng</a>
+    <div class="nav-item active">
+      <a href="index.html" style="text-decoration: none; color: inherit;">
+        <i class="fa-solid fa-book"></i>Cẩm nang
+      </a>
+    </div>
+    <a class="nav-item" href="hotel.html"><i class="fa-solid fa-building"></i>Khách sạn</a>
+    <a class="nav-item" href="travel.html"><i class="fa-solid fa-suitcase-rolling"></i>Combo du lịch</a>
+    <a class="nav-item" href="support.html"><i class="fa-solid fa-headset"></i>Hỗ trợ khách hàng</a>
   </div>
   <!-- Banner -->
   <div class="banner">
@@ -452,143 +464,140 @@ document.addEventListener('DOMContentLoaded', function() {
   </div>
   <!-- Main content -->
   <div class="main-content">
-    <h1>Du lịch Đà Nẵng nhớ ghé chơi những điểm tham quan hấp dẫn giá 0 đồng</h1>
-    <div class="highlight">
-      Du lịch Đà Nẵng có không ít điểm tham quan thú vị cho du khách tự do khám phá.
-    </div>
-
-    <!-- Biển Đà Nẵng -->
+    <h1>Mê Mẩn 5 Bãi Biển Đà Nẵng Đẹp Quên Lối Về năm 2025</h1>
+    <p>
+      Được mệnh danh là thành phố đáng sống nhất ở Việt Nam, Đà Nẵng còn nổi tiếng với du lịch biển phát triển. Những
+      bãi biển tại đây được thiên nhiên ưu ái ban tặng cho vẻ đẹp thanh bình, nên thơ cùng sự phát triển của các dịch vụ
+      và lòng hiếu khách của người dân. Dưới đây là 5 bãi biển đẹp nhất Đà Nẵng mà bạn không nên bỏ qua khi đến thăm
+      thành phố này.
+    </p>
     <div class="place">
-      <div class="place-icon"><i class="fa-solid fa-water"></i></div>
+      <div class="place-icon"><i class="fa-solid fa-umbrella-beach"></i></div>
       <div class="place-content">
-        <h3>Biển Đà Nẵng</h3>
-        <p>Được mệnh danh là thành phố biển, Đà Nẵng được thiên nhiên ưu ái với đường bờ biển dài tít tắp, bãi cát trắng mịn màng, nước biển xanh và sạch. Tắm biển chắc chắn là trải nghiệm tuyệt vời mà bạn nên thử khi đến đây.</p>
-        <div class="highlight">
-          Thời gian thích hợp nhất để du lịch biển ở Đà Nẵng là tháng 4 đến tháng 7 hàng năm, đây là lúc khí hậu thuận lợi nhất cho những hoạt động vui chơi trên biển.
+        <h3>1. Bãi biển Mỹ Khê</h3>
+        <div class="location">
+          Địa chỉ: Đường Võ Nguyên Giáp, T20, phường Phước Mỹ, quận Sơn Trà, Đà Nẵng.
         </div>
+        <p>
+          Là một trong 6 bãi biển quyến rũ nhất hành tinh do tạp chí Forbes bình chọn. Mỹ Khê thu hút du khách bởi bãi
+          cát trắng mịn trải dài và làn nước trong xanh. Thiên nhiên tươi xinh và sóng biển ôn hòa suốt 4 mùa… Xung
+          quanh bãi biển là hệ thống nhà hàng, khách sạn và quán bar sôi động.
+        </p>
+        <p>Đặc sản hấp dẫn:</p>
+        <ul>
+          <li>Bánh nậm Mỹ Khê</li>
+          <li>Mì quảng</li>
+          <li>Gỏi trứng cá chuồn</li>
+          <li>Hải sản tươi ngon</li>
+        </ul>
       </div>
     </div>
     <div class="post-img-center">
-      <img class="post-img" src="https://th.bing.com/th/id/OIP.C2gHZ0ZKoihpVr1Pcd_ujwHaGD?rs=1&pid=ImgDetMain" alt="Biển Đà Nẵng">
+      <img class="post-img" src="https://th.bing.com/th/id/OIP.toNxtB7CZNBO_WaI5YrRswHaEo?rs=1&pid=ImgDetMain"
+        alt="Bãi biển Mỹ Khê">
     </div>
 
-    <!-- Chùa Linh Ứng bán đảo Sơn Trà -->
     <div class="place">
-      <div class="place-icon"><i class="fa-solid fa-place-of-worship"></i></div>
+      <div class="place-icon"><i class="fa-solid fa-water"></i></div>
       <div class="place-content">
-        <h3>Chùa Linh Ứng bán đảo Sơn Trà</h3>
-        <p>Nếu bạn là tín đồ của những chuyến du lịch tâm linh thì đây đích thị là một điểm đến lý tưởng dành cho bạn. Với địa thế đẹp, quy mô lớn và kiến trúc nổi bật, Chùa Linh Ứng là một điểm đến thú vị.</p>
-        <p>Đặc biệt trong khuôn viên chùa là tượng phật Quan Âm hướng mình ra biển, tựa lưng vào Sơn Trà, một trong những bán đảo xinh đẹp và hùng vĩ tại Đà Nẵng mang ý nghĩa tâm linh sâu sắc. Ngắm cảnh thiên nhiên, vãn cảnh chùa sẽ là một trải nghiệm khó quên dành cho bạn.</p>
-      </div>
-    </div>
-    <div class="post-img-center">
-      <img class="post-img" src="https://th.bing.com/th/id/OIP.DIxvyhrGdrTnJ-SFvFnkogHaE8?rs=1&pid=ImgDetMain" alt="Chùa Linh Ứng Sơn Trà">
-    </div>
-
-    <!-- Cầu Rồng phun nước, phun lửa -->
-    <div class="place">
-      <div class="place-icon"><i class="fa-solid fa-dragon"></i></div>
-      <div class="place-content">
-        <h3>Xem cầu Rồng phun nước – phun lửa</h3>
-        <p>Buổi tối 2 ngày cuối tuần vào lúc 21h, cầu rồng sẽ có tiết mục phun lửa và phun nước khá thú vị. Vào khoảng thời gian này, 2 đầu cầu sẽ chặn xe qua lại để phục vụ cho việc phun nước, lửa của cầu Rồng. Do vậy, bạn có thể đi dọc đường kiếm các quán cóc ngồi uống nước và ngắm cầu rồng là lý tưởng nhất.</p>
-      </div>
-    </div>
-    <div class="post-img-center">
-      <img class="post-img" src="https://th.bing.com/th/id/OIP.PNUbtCNO_lT1XkK6raDywAHaFv?rs=1&pid=ImgDetMain" alt="Cầu Rồng Đà Nẵng">
-    </div>
-
-    <!-- Cầu sông Hàn xoay -->
-    <div class="place">
-      <div class="place-icon"><i class="fa-solid fa-bridge"></i></div>
-      <div class="place-content">
-        <h3>Xem cầu sông Hàn xoay</h3>
-        <p>Cầu sông Hàn được xây dựng trên trục chính của đường Bạch Đằng, nối quận Hải Châu với quận Sơn Trà, cây cầu quay là niềm tự hào của người dân Đà Nẵng. Cây cầu đẹp lung linh và nổi bật giữa thành phố mỗi khi màn đêm buông xuống. Nét đặc biệt là mỗi đêm, cầu sông Hàn lại quay 90 độ quanh trục giữa cầu cho những con tàu lớn đi qua.</p>
-        <div class="highlight">
-          Cầu sông Hàn quay từ 23h – 24h vào hai ngày Thứ Bảy và Chủ nhật hàng tuần. Tạm dừng các phương tiện lưu thông qua cầu trước 15 phút thời điểm cầu bắt đầu quay cho đến khi hết giờ cầu quay.
+        <h3>2. Bãi biển Bắc Mỹ An</h3>
+        <div class="location">
+          Địa chỉ: Phường Bắc Mỹ An, quận Ngũ Hành Sơn, Đà Nẵng.
         </div>
+        <p>
+          Chỉ cách trung tâm thành phố 7km, Bắc Mỹ An được đánh giá là một trong những bãi biển đẹp nhất Việt Nam. Bờ
+          biển dài 4km với làn nước ấm và sóng biển dịu êm giúp hoạt động bơi lội trở nên an toàn hơn. Nhờ đó, đây cũng
+          là điểm đến thích hợp với những gia đình có trẻ nhỏ.
+        </p>
+        <p>
+          Khi hoàng hôn buông xuống, Bắc Mỹ An khoác lên mình vẻ đẹp huyền ảo khó quên. Đi dạo trên con đường biển khi
+          chiều xuống, lắng nghe từng nhịp sóng vỗ rì rào bạn sẽ thấy lòng mình bình yên đến lạ.
+        </p>
       </div>
     </div>
     <div class="post-img-center">
-      <img class="post-img" src="https://th.bing.com/th/id/OIP.gdthE4zPLOaOvgwvzYNZugHaEJ?rs=1&pid=ImgDetMain" alt="Cầu Sông Hàn">
+      <img class="post-img" src="https://th.bing.com/th/id/OIP.-iwZcyOas3OFkmWukTqH8wHaEA?rs=1&pid=ImgDetMain"
+        alt="Bãi biển Bắc Mỹ An">
     </div>
 
-    <!-- Hồ Hòa Trung -->
     <div class="place">
-      <div class="place-icon"><i class="fa-solid fa-water"></i></div>
+      <div class="place-icon"><i class="fa-solid fa-mountain-sun"></i></div>
       <div class="place-content">
-        <h3>Hồ Hòa Trung</h3>
-        <p>Hồ Hòa Trung thuộc địa phận xã Hòa Liên (Hòa Vang, Đà Nẵng) cách trung tâm thành phố khoảng 20km, được ví như thảo nguyên Tây Tạng giữa lòng Đà Nẵng với những bãi cỏ xanh mát bằng phẳng, kéo dài thẳng tắp, bao bọc quanh lòng hồ nhân tạo.</p>
-        <p>Đây là địa điểm lý tưởng để bạn có thể trải nghiệm chèo thuyền độc mộc trên dòng sông xanh ngắt. Những chiếc thuyền độc mộc là do người dân nuôi cá bè làm ra để thăm nuôi cá, di chuyển qua bên hồ.</p>
+        <h3>3. Bãi biển Non Nước</h3>
+        <div class="location">
+          Địa chỉ: Phường Hòa Hải, Quận Ngũ Hành Sơn, Đà Nẵng.
+        </div>
+        <p>
+          Non Nước mang vẻ đẹp hiếm có của một bãi biển hoang sơ nằm dưới chân núi Ngũ Hành Sơn. Đến đây, du khách được
+          chiêm ngưỡng vẻ đẹp hoang sơ, thanh bình với bãi cát trắng trải dài 5km cùng nước biển trong xanh. Nắng vàng
+          lấp lánh cùng những làn gió thoảng qua đủ làm siêu lòng bất cứ ai.
+        </p>
+        <p>
+          Hoạt động giải trí hấp dẫn:
+        </p>
+        <ul>
+          <li>Lặn biển ngắm hệ thủy sinh rực rỡ</li>
+          <li>Chơi dù lượn</li>
+          <li>Lướt sóng</li>
+        </ul>
       </div>
     </div>
     <div class="post-img-center">
-      <img class="post-img" src="https://th.bing.com/th/id/OIP.QAUOJNbdL2XxqS7jJ4njGAHaF4?rs=1&pid=ImgDetMain" alt="Hồ Hòa Trung Đà Nẵng">
+      <img class="post-img" src="https://th.bing.com/th/id/OIP.Pj4_ibzE_YUEsAGzenXawgHaE7?rs=1&pid=ImgDetMain"
+        alt="Bãi biển Non Nước">
     </div>
 
-    <!-- Làng cổ Túy Loan -->
     <div class="place">
-      <div class="place-icon"><i class="fa-solid fa-tree-city"></i></div>
+      <div class="place-icon"><i class="fa-solid fa-fish"></i></div>
       <div class="place-content">
-        <h3>Làng cổ Túy Loan</h3>
-        <p>Làng cổ tọa lạc tại xã Hòa Phong, huyện Hòa Vang, cách trung tâm thành phố Đà Nẵng chừng 15km. Làng cổ Túy Loan đã có trên 500 tuổi. Đến làng cổ Túy Loan, bạn không nên bỏ lỡ dịp được nếm thử món đặc sản bánh tráng và Mỳ Quảng nức tiếng xa gần của du lịch Đà Nẵng.</p>
+        <h3>4. Bãi Rạn Nam Ô</h3>
+        <div class="location">
+          Địa chỉ: Phường Hòa Hiệp Bắc, quận Liên Chiểu, Đà Nẵng.
+        </div>
+        <p>
+          Mang vẻ đẹp hùng vĩ nhưng không kém phần nên thơ, đây là bãi biển Đà Nẵng được giới trẻ yêu thích bởi những
+          góc chụp hình “sống ảo” độc đáo. Ẩn hiện trong từng đợt sóng bạc đầu là bãi đá phủ rêu phong xanh mướt mang vẻ
+          đẹp của thời gian. Có những tảng đá lớn đủ một người nằm. Bên cạnh đó là bãi đá cuội cùng dải san hô muôn màu
+          nằm dưới chân núi.
+        </p>
       </div>
     </div>
     <div class="post-img-center">
-      <img class="post-img" src="https://th.bing.com/th/id/OIP.1jspwcOJWbZocPz3pSAymQHaEK?rs=1&pid=ImgDetMain" alt="Làng cổ Túy Loan">
+      <img class="post-img" src="https://th.bing.com/th/id/OIP.HIZQb2Y_XoGmDmDA33UcAwHaEK?rs=1&pid=ImgDetMain"
+        alt="Bãi Rạn Nam Ô">
     </div>
 
-    <!-- Rạn Nam Ô -->
     <div class="place">
-      <div class="place-icon"><i class="fa-solid fa-water"></i></div>
+      <div class="place-icon"><i class="fa-solid fa-campground"></i></div>
       <div class="place-content">
-        <h3>Rạn Nam Ô</h3>
-        <p>Rạn Nam Ô là một địa điểm du lịch khá mới mẻ với nhiều du khách bởi lẽ trong hầu hết các hành trình khám phá Đà Nẵng ít có công ty du lịch đưa Rạn Nam Ô vào lộ trình tham quan và khám phá. Tuy nhiên, Rạn Nam Ô luôn gợi sự tò mò, thích thú cho những ai đã từng đặt chân đến đây.</p>
-        <p>Rạn nằm cách trung tâm làng Nam Ô thuộc phường Hòa Hiệp Nam, quận Liên Chiểu, Đà Nẵng khoảng 2km về hướng Đông Nam, nơi đây có một dải đá ngầm, ngư dân trong vùng gọi là rạn Nam Ô. Rạn Nam Ô có nhiều rong tảo nên là nơi trú ngụ của nhiều loài cá và hải sản quý.</p>
+        <h3>5. Bãi biển Làng Vân</h3>
+        <div class="location">
+          Địa chỉ: Dưới chân đèo Hải Vân, Hòa Hiệp Bắc, quận Liên Chiểu, Đà Nẵng.
+        </div>
+        <p>
+          Nằm biệt lập với thành phố, bãi biển Làng Vân vẫn giữ được nét hoang sơ, thanh bình. Những vị khách đam mê
+          khám phá, chinh phục không thể bỏ qua địa điểm này.
+        </p>
+        <p>
+          Bãi dừa là địa điểm được yêu thích nhất thuộc Làng Vân. Tại đây, bạn có thể cùng bạn bè cắm trại, câu cá, đón
+          bình minh trên biển và thỏa sức vui chơi trong làn nước tinh khiết.
+        </p>
+        <p>
+          Làng Vân bình dị là thế nhưng lại được mệnh danh là “thiên hạ đệ nhất hùng quan” với sự kết hợp hữu tình giữa
+          làng quê, biển đảo và núi rừng.
+        </p>
       </div>
     </div>
     <div class="post-img-center">
-      <img class="post-img" src="https://th.bing.com/th/id/OIP.fY0oeQsGi9QFDOzC7_FB7wHaE8?rs=1&pid=ImgDetMain" alt="Rạn Nam Ô">
+      <img class="post-img" src="https://th.bing.com/th/id/OIP.A36aKdsP0tb9HpIO_GBXGAHaEU?rs=1&pid=ImgDetMain"
+        alt="Bãi biển Làng Vân">
     </div>
 
-    <!-- Chợ Cồn -->
-    <div class="place">
-      <div class="place-icon"><i class="fa-solid fa-store"></i></div>
-      <div class="place-content">
-        <h3>Chợ Cồn</h3>
-        <p>Chợ Cồn là khu mua bán lớn nhất TP. Đà Nẵng và khu vực miền Trung. Lượng khách đến với chợ Cồn hiện nay không chỉ đơn thuần để mua sắm mà đây còn là điểm tham quan hấp dẫn của du lịch Đà Nẵng. Chợ nằm ở ngã tư đường Hùng Vương – Ông Ích Khiêm thuộc phường Hải Châu II, quận Hải Châu.</p>
-      </div>
-    </div>
-    <div class="post-img-center">
-      <img class="post-img" src="https://th.bing.com/th/id/OIP.TkFpTEBWzP0S8CaenAHbkwHaF4?rs=1&pid=ImgDetMain" alt="Chợ Cồn Đà Nẵng">
-    </div>
-
-    <!-- Cầu khóa tình yêu -->
-    <div class="place">
-      <div class="place-icon"><i class="fa-solid fa-heart"></i></div>
-      <div class="place-content">
-        <h3>Cầu khóa tình yêu</h3>
-        <p>Cầu tình yêu nằm ngay đầu cầu Rồng, đường Trần Hưng Đạo, quận Sơn Trà. Đây cũng là một cây cầu được xây dựng làm bến du thuyền. Mọi người đến Cầu tình yêu này không phải mua vé.</p>
-        <p>Cầu có hình vòng cung dài 68m, rộng 6m, hướng về giữa sông và có nhiều không gian để ngắm vẻ đẹp đôi bờ sông Hàn. Buổi tối, hàng trăm chiếc đèn lồng đỏ hình trái tim được thắp sáng, ánh xuống mặt nước khiến cả khu vực trở nên cực kỳ lãng mạn.</p>
-      </div>
-    </div>
-    <div class="post-img-center">
-      <img class="post-img" src="https://th.bing.com/th/id/OIP.jTv_ygA6U2dXs75Ua84E6wHaHa?rs=1&pid=ImgDetMain" alt="Cầu khóa tình yêu Đà Nẵng">
-    </div>
-
-    <!-- Phượt đèo -->
-    <div class="place">
-      <div class="place-icon"><i class="fa-solid fa-mountain"></i></div>
-      <div class="place-content">
-        <h3>Phượt đèo</h3>
-        <p>Di chuyển ra khỏi trung tâm thành phố và cùng tận hưởng những kỉ niệm khó phai khi phượt những ngọn đèo cao chênh vênh núi. Thật tuyệt vời khi được cùng một ai đó phượt những đoạn đèo dốc và thú vị như: Hải Vân, Phước Tượng,.. Thử cảm giác mạnh và bắt gặp hình ảnh tuyệt đẹp của vịnh biển Lăng Cô – Vịnh biển đẹp nhất thế giới tại đây.</p>
-      </div>
-    </div>
-    <div class="post-img-center">
-      <img class="post-img" src="https://th.bing.com/th/id/OIP.fPTTYC0IKKLg3pUdPEYRtgHaE8?rs=1&pid=ImgDetMain" alt="Đèo Hải Vân Đà Nẵng">
-    </div>
     <div class="highlight">
-      Đà Nẵng còn rất nhiều điểm đến hấp dẫn khác đang chờ bạn tự mình khám phá!
+      5 bãi biển trên là những điểm đến không thể bỏ qua khi đến Đà Nẵng. Hãy lên kế hoạch để tận hưởng trọn vẹn vẻ đẹp
+      biển xanh - cát trắng - nắng vàng của thành phố đáng sống nhất Việt Nam!
     </div>
   </div>
 </body>
+
 </html>

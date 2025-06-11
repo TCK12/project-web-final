@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
   <meta charset="UTF-8">
   <title>Du lịch Đà Nẵng - BWD2025</title>
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
-  <style>
+  <link rel="stylesheet" href="css/handbook.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/modal.css">
+  <script src="js/handbook.js"></script>
+  <!-- <style>
     body {
       font-family: 'Roboto', Arial, sans-serif;
       background: #f6f7fb;
       margin: 0;
       color: #222;
     }
-    /* Header */
     .header {
       display: flex;
       align-items: center;
@@ -56,7 +60,6 @@
       background: #1a73e8;
       color: #fff;
     }
-    /* Navbar */
     .navbar {
       display: flex;
       background: #fff;
@@ -96,7 +99,6 @@
       font-size: 28px;
       margin-bottom: 4px;
     }
-    /* Banner */
     .banner {
       width: 100%;
       height: 270px;
@@ -118,7 +120,6 @@
       bottom: 70px;
       left: 60px;
     }
-    /* Main Content */
     .main-content {
       max-width: 900px;
       margin: 34px auto 0 auto;
@@ -163,7 +164,7 @@
       font-weight: 500;
       font-size: 16px;
     }
-    .main-content .place {
+    .place {
       display: flex;
       align-items: flex-start;
       gap: 22px;
@@ -171,24 +172,23 @@
       border-bottom: 1px solid #f3e8d5;
       padding-bottom: 20px;
     }
-    .main-content .place:last-child {
+    .place:last-child {
       border-bottom: none;
       padding-bottom: 0;
     }
-    .main-content .place-icon {
+    .place-icon {
       font-size: 40px;
       color: #ffa200;
       flex-shrink: 0;
       margin-top: 3px;
     }
-    .main-content .place-content {
+    .place-content {
       flex: 1;
     }
-    /* Căn giữa ảnh post */
     .post-img-center {
       display: flex;
       justify-content: center;
-      margin: 22px 0;
+      margin: 18px 0 28px 0;
     }
     .post-img {
       max-width: 100%;
@@ -196,7 +196,6 @@
       border-radius: 12px;
       box-shadow: 0 4px 18px rgba(0,0,0,0.09);
     }
-    /* Responsive */
     @media (max-width: 700px) {
       .banner-title {
         font-size: 32px;
@@ -216,8 +215,15 @@
         font-size: 15px;
         padding: 13px 0 9px 0;
       }
+      .place {
+        flex-direction: column;
+        gap: 8px;
+      }
+      .place-icon {
+        font-size: 32px;
+      }
     }
-  </style>
+  </style> -->
 </head>
 <!-- Popup Login Modal -->
 <div id="loginModal" class="modal">
@@ -239,7 +245,7 @@
   </div>
 </div>
 
-<style>
+<!-- <style>
 /* Modal Background */
 .modal {
   display: none;
@@ -336,9 +342,9 @@
   .modal-content { max-width: 99vw; padding: 18px 7vw 14px 7vw;}
   .modal { padding: 0; }
 }
-</style>
+</style> -->
 
-<script>
+<!-- <script>
 document.addEventListener('DOMContentLoaded', function() {
   const modal = document.getElementById('loginModal');
   const btn = document.querySelector('.login-btn');
@@ -422,153 +428,213 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
 });
-</script>
+</script> -->
+
 <body>
   <!-- Header -->
   <div class="header">
     <div class="logo">
-      <img src="C:\Users\manhh\OneDrive\Pictures\Screenshots\Ảnh chụp màn hình 2025-04-16 082125.png" alt="DaNangTrip Logo">
+      <img src="C:\Users\manhh\OneDrive\Pictures\Screenshots\Ảnh chụp màn hình 2025-04-16 082125.png"
+        alt="DaNangTrip Logo">
     </div>
     <div class="right">
       <span class="hotline"><i class="fa-solid fa-headset"></i>0788 0646 458</span>
       <button class="login-btn">Đăng nhập</button>
     </div>
   </div>
-<!-- Nav -->
-<div class="navbar">
-  <div class="nav-item active">
-    <a href="trangchu.html" style="text-decoration: none; color: inherit;">
-      <i class="fa-solid fa-book"></i>Cẩm nang
-    </a>
+  <!-- Nav -->
+  <div class="navbar">
+    <div class="nav-item active">
+      <a href="index.html" style="text-decoration: none; color: inherit;">
+        <i class="fa-solid fa-book"></i>Cẩm nang
+      </a>
+    </div>
+    <a class="nav-item" href="hotel.html"><i class="fa-solid fa-building"></i>Khách sạn</a>
+    <a class="nav-item" href="travel.html"><i class="fa-solid fa-suitcase-rolling"></i>Combo du lịch</a>
+    <a class="nav-item" href="support.html"><i class="fa-solid fa-headset"></i>Hỗ trợ khách hàng</a>
   </div>
-  <a class="nav-item" href="khachsan.html"><i class="fa-solid fa-building"></i>Khách sạn</a>
-    <a class="nav-item" href="combodulich.html"><i class="fa-solid fa-suitcase-rolling"></i>Combo du lịch</a>
-  <a class="nav-item" href="hotrokhachhang.html"><i class="fa-solid fa-headset"></i>Hỗ trợ khách hàng</a>
-</div>
   <!-- Banner -->
   <div class="banner">
     <div class="banner-title">Đà Nẵng</div>
   </div>
   <!-- Main content -->
   <div class="main-content">
-    <h1>Hành Trình Qua Những Cây Cầu Đẹp Như Mơ Ở Thành Phố Đáng Sống</h1>
-    <p>
-      Khi nhắc đến Đà Nẵng – thành phố đáng sống của Việt Nam, không ai có thể quên được hình ảnh những cây cầu bắc ngang dòng sông Hàn thơ mộng. Mỗi cây cầu nơi đây không chỉ là điểm nhấn kiến trúc đặc sắc mà còn gắn liền với cảm xúc, ký ức và câu chuyện riêng của hàng triệu người dân cũng như du khách. Hãy cùng chúng tôi trải nghiệm hành trình khám phá những cây cầu đẹp như mơ – nơi hội tụ giữa hiện đại, truyền thống và nét đặc trưng chỉ riêng Đà Nẵng mới có.
-    </p>
+    <h1>Du lịch Đà Nẵng nhớ ghé chơi những điểm tham quan hấp dẫn giá 0 đồng</h1>
     <div class="highlight">
-      Mỗi cây cầu ở Đà Nẵng là một câu chuyện, một dấu ấn riêng góp phần làm nên bức tranh thành phố trẻ trung, sống động và đầy sức hút.
+      Du lịch Đà Nẵng có không ít điểm tham quan thú vị cho du khách tự do khám phá.
     </div>
 
+    <!-- Biển Đà Nẵng -->
+    <div class="place">
+      <div class="place-icon"><i class="fa-solid fa-water"></i></div>
+      <div class="place-content">
+        <h3>Biển Đà Nẵng</h3>
+        <p>Được mệnh danh là thành phố biển, Đà Nẵng được thiên nhiên ưu ái với đường bờ biển dài tít tắp, bãi cát trắng
+          mịn màng, nước biển xanh và sạch. Tắm biển chắc chắn là trải nghiệm tuyệt vời mà bạn nên thử khi đến đây.</p>
+        <div class="highlight">
+          Thời gian thích hợp nhất để du lịch biển ở Đà Nẵng là tháng 4 đến tháng 7 hàng năm, đây là lúc khí hậu thuận
+          lợi nhất cho những hoạt động vui chơi trên biển.
+        </div>
+      </div>
+    </div>
+    <div class="post-img-center">
+      <img class="post-img" src="https://th.bing.com/th/id/OIP.C2gHZ0ZKoihpVr1Pcd_ujwHaGD?rs=1&pid=ImgDetMain"
+        alt="Biển Đà Nẵng">
+    </div>
+
+    <!-- Chùa Linh Ứng bán đảo Sơn Trà -->
+    <div class="place">
+      <div class="place-icon"><i class="fa-solid fa-place-of-worship"></i></div>
+      <div class="place-content">
+        <h3>Chùa Linh Ứng bán đảo Sơn Trà</h3>
+        <p>Nếu bạn là tín đồ của những chuyến du lịch tâm linh thì đây đích thị là một điểm đến lý tưởng dành cho bạn.
+          Với địa thế đẹp, quy mô lớn và kiến trúc nổi bật, Chùa Linh Ứng là một điểm đến thú vị.</p>
+        <p>Đặc biệt trong khuôn viên chùa là tượng phật Quan Âm hướng mình ra biển, tựa lưng vào Sơn Trà, một trong
+          những bán đảo xinh đẹp và hùng vĩ tại Đà Nẵng mang ý nghĩa tâm linh sâu sắc. Ngắm cảnh thiên nhiên, vãn cảnh
+          chùa sẽ là một trải nghiệm khó quên dành cho bạn.</p>
+      </div>
+    </div>
+    <div class="post-img-center">
+      <img class="post-img" src="https://th.bing.com/th/id/OIP.DIxvyhrGdrTnJ-SFvFnkogHaE8?rs=1&pid=ImgDetMain"
+        alt="Chùa Linh Ứng Sơn Trà">
+    </div>
+
+    <!-- Cầu Rồng phun nước, phun lửa -->
     <div class="place">
       <div class="place-icon"><i class="fa-solid fa-dragon"></i></div>
       <div class="place-content">
-        <h3>Cầu Rồng – Biểu tượng rực rỡ của Đà Nẵng</h3>
-        <p>
-          Không thể không nhắc đến Cầu Rồng khi nói về các cây cầu nổi tiếng nhất Đà Nẵng. Được khánh thành vào năm 2013, Cầu Rồng gây ấn tượng mạnh với thiết kế mô phỏng hình dáng một con rồng vàng uốn lượn vươn ra biển lớn, tượng trưng cho khát vọng vươn xa của thành phố trẻ năng động. Đặc biệt, màn phun lửa, phun nước vào mỗi tối cuối tuần đã trở thành “đặc sản” không thể bỏ lỡ của du khách. Ánh sáng rực rỡ trên thân cầu khi đêm về khiến Cầu Rồng thực sự lộng lẫy, góp phần đưa hình ảnh Đà Nẵng lan tỏa khắp thế giới.
-        </p>
+        <h3>Xem cầu Rồng phun nước – phun lửa</h3>
+        <p>Buổi tối 2 ngày cuối tuần vào lúc 21h, cầu rồng sẽ có tiết mục phun lửa và phun nước khá thú vị. Vào khoảng
+          thời gian này, 2 đầu cầu sẽ chặn xe qua lại để phục vụ cho việc phun nước, lửa của cầu Rồng. Do vậy, bạn có
+          thể đi dọc đường kiếm các quán cóc ngồi uống nước và ngắm cầu rồng là lý tưởng nhất.</p>
       </div>
+    </div>
+    <div class="post-img-center">
+      <img class="post-img" src="https://th.bing.com/th/id/OIP.PNUbtCNO_lT1XkK6raDywAHaFv?rs=1&pid=ImgDetMain"
+        alt="Cầu Rồng Đà Nẵng">
     </div>
 
-        <div class="post-img-center">
-      <img class="post-img" src="https://statics.vinpearl.com/cau-rong-da-nang-0_1629438622.png" alt="cầu rồng Đà Nẵng">
-    </div>
-    <div class="place">
-      <div class="place-icon"><i class="fa-solid fa-sailboat"></i></div>
-      <div class="place-content">
-        <h3>Cầu Trần Thị Lý – Vẻ đẹp hiện đại và duyên dáng</h3>
-        <p>
-          Nếu Cầu Rồng nổi bật bởi sự uy nghi, thì Cầu Trần Thị Lý lại khiến người ta say đắm bởi nét đẹp hiện đại pha lẫn sự mềm mại. Được thiết kế theo phong cách dây văng nghiêng độc đáo, cầu như một cánh buồm căng gió trên sông Hàn, vừa lãng mạn vừa đầy sức sống. Đặc biệt, vào ban đêm, hệ thống đèn LED nhiều màu sắc khiến cả cây cầu tỏa sáng lung linh, trở thành địa điểm “check-in” yêu thích của nhiều bạn trẻ. Cầu Trần Thị Lý không chỉ là công trình giao thông mà còn là nguồn cảm hứng nghệ thuật cho nhiều nhiếp ảnh gia.
-        </p>
-      </div>
-    </div>
-            <div class="post-img-center">
-      <img class="post-img" src="https://th.bing.com/th/id/OIP.Ri8r-WDMzAcQDyP19OpCSwHaDX?cb=iwp2&rs=1&pid=ImgDetMain" alt="cầu Trần Thị Lý">
-    </div>
-    <div class="place">
-      <div class="place-icon"><i class="fa-solid fa-archway"></i></div>
-      <div class="place-content">
-        <h3>Cầu Thuận Phước – Công trình kiến trúc độc đáo</h3>
-        <p>
-          Nằm ở cửa sông Hàn, Cầu Thuận Phước giữ vị trí là cây cầu treo dây võng dài nhất Việt Nam. Với chiều dài gần 2 km, cầu kết nối trung tâm thành phố với bán đảo Sơn Trà, tạo nên sự thuận tiện cho giao thông và phát triển du lịch. Thiết kế hiện đại, thanh thoát của cầu hòa quyện cùng khung cảnh biển trời bao la, tạo nên một bức tranh tuyệt mỹ mà bất cứ ai đến Đà Nẵng cũng nên một lần ngắm nhìn.
-        </p>
-      </div>
-    </div>
-            <div class="post-img-center">
-      <img class="post-img" src="https://th.bing.com/th/id/OIP.ChYt9KF1ONCxAfV1SNpTawHaE9?o=7&cb=iwp2rm=3&rs=1&pid=ImgDetMain" alt="cầu Cầu Thuận Phước">
-    </div>
+    <!-- Cầu sông Hàn xoay -->
     <div class="place">
       <div class="place-icon"><i class="fa-solid fa-bridge"></i></div>
       <div class="place-content">
-        <h3>Cầu Nguyễn Văn Trỗi – Nơi lưu giữ ký ức tuổi trẻ</h3>
-        <p>
-          Giữa những cây cầu hiện đại, Cầu Nguyễn Văn Trỗi lại mang trong mình dáng vẻ bình dị, cổ kính. Được xây dựng từ năm 1965, đây là cây cầu lâu đời nhất bắc qua sông Hàn và từng là tuyến giao thông huyết mạch của thành phố. Ngày nay, cầu đã trở thành không gian đi bộ, nơi tổ chức các hoạt động văn hóa, nghệ thuật đường phố, và là “tọa độ sống ảo” lý tưởng của giới trẻ Đà Nẵng mỗi buổi chiều tà.
-        </p>
+        <h3>Xem cầu sông Hàn xoay</h3>
+        <p>Cầu sông Hàn được xây dựng trên trục chính của đường Bạch Đằng, nối quận Hải Châu với quận Sơn Trà, cây cầu
+          quay là niềm tự hào của người dân Đà Nẵng. Cây cầu đẹp lung linh và nổi bật giữa thành phố mỗi khi màn đêm
+          buông xuống. Nét đặc biệt là mỗi đêm, cầu sông Hàn lại quay 90 độ quanh trục giữa cầu cho những con tàu lớn đi
+          qua.</p>
+        <div class="highlight">
+          Cầu sông Hàn quay từ 23h – 24h vào hai ngày Thứ Bảy và Chủ nhật hàng tuần. Tạm dừng các phương tiện lưu thông
+          qua cầu trước 15 phút thời điểm cầu bắt đầu quay cho đến khi hết giờ cầu quay.
+        </div>
       </div>
     </div>
-            <div class="post-img-center">
-      <img class="post-img" src="https://tourdanangcity.vn/wp-content/uploads/2022/04/cau-nguyen-van-troi-da-nang-7.jpg" alt="Cầu Nguyễn Văn Trỗi">
+    <div class="post-img-center">
+      <img class="post-img" src="https://th.bing.com/th/id/OIP.gdthE4zPLOaOvgwvzYNZugHaEJ?rs=1&pid=ImgDetMain"
+        alt="Cầu Sông Hàn">
     </div>
+
+    <!-- Hồ Hòa Trung -->
     <div class="place">
-      <div class="place-icon"><i class="fa-solid fa-road-bridge"></i></div>
+      <div class="place-icon"><i class="fa-solid fa-water"></i></div>
       <div class="place-content">
-        <h3>Cầu Tuyên Sơn – Dấu ấn của thời gian</h3>
-        <p>
-          Cầu Tuyên Sơn là một trong những cây cầu lâu đời, mang đậm dấu ấn thời gian của Đà Nẵng. Với kiến trúc vững chãi, cầu không chỉ giúp kết nối các khu vực phía Nam thành phố mà còn gắn liền với ký ức của nhiều thế hệ người dân nơi đây. Dù không quá lộng lẫy như những cây cầu mới, nhưng Cầu Tuyên Sơn lại toát lên vẻ đẹp trầm mặc, giản dị và gần gũi.
-        </p>
+        <h3>Hồ Hòa Trung</h3>
+        <p>Hồ Hòa Trung thuộc địa phận xã Hòa Liên (Hòa Vang, Đà Nẵng) cách trung tâm thành phố khoảng 20km, được ví như
+          thảo nguyên Tây Tạng giữa lòng Đà Nẵng với những bãi cỏ xanh mát bằng phẳng, kéo dài thẳng tắp, bao bọc quanh
+          lòng hồ nhân tạo.</p>
+        <p>Đây là địa điểm lý tưởng để bạn có thể trải nghiệm chèo thuyền độc mộc trên dòng sông xanh ngắt. Những chiếc
+          thuyền độc mộc là do người dân nuôi cá bè làm ra để thăm nuôi cá, di chuyển qua bên hồ.</p>
       </div>
     </div>
-            <div class="post-img-center">
-      <img class="post-img" src="https://th.bing.com/th/id/OIP.yvqzLiVsSDnEmk-r6dVuswEsDH?cb=iwp2&rs=1&pid=ImgDetMain" alt="Cầu Tuyên Sơng">
+    <div class="post-img-center">
+      <img class="post-img" src="https://th.bing.com/th/id/OIP.QAUOJNbdL2XxqS7jJ4njGAHaF4?rs=1&pid=ImgDetMain"
+        alt="Hồ Hòa Trung Đà Nẵng">
     </div>
+
+    <!-- Làng cổ Túy Loan -->
+    <div class="place">
+      <div class="place-icon"><i class="fa-solid fa-tree-city"></i></div>
+      <div class="place-content">
+        <h3>Làng cổ Túy Loan</h3>
+        <p>Làng cổ tọa lạc tại xã Hòa Phong, huyện Hòa Vang, cách trung tâm thành phố Đà Nẵng chừng 15km. Làng cổ Túy
+          Loan đã có trên 500 tuổi. Đến làng cổ Túy Loan, bạn không nên bỏ lỡ dịp được nếm thử món đặc sản bánh tráng và
+          Mỳ Quảng nức tiếng xa gần của du lịch Đà Nẵng.</p>
+      </div>
+    </div>
+    <div class="post-img-center">
+      <img class="post-img" src="https://th.bing.com/th/id/OIP.1jspwcOJWbZocPz3pSAymQHaEK?rs=1&pid=ImgDetMain"
+        alt="Làng cổ Túy Loan">
+    </div>
+
+    <!-- Rạn Nam Ô -->
+    <div class="place">
+      <div class="place-icon"><i class="fa-solid fa-water"></i></div>
+      <div class="place-content">
+        <h3>Rạn Nam Ô</h3>
+        <p>Rạn Nam Ô là một địa điểm du lịch khá mới mẻ với nhiều du khách bởi lẽ trong hầu hết các hành trình khám phá
+          Đà Nẵng ít có công ty du lịch đưa Rạn Nam Ô vào lộ trình tham quan và khám phá. Tuy nhiên, Rạn Nam Ô luôn gợi
+          sự tò mò, thích thú cho những ai đã từng đặt chân đến đây.</p>
+        <p>Rạn nằm cách trung tâm làng Nam Ô thuộc phường Hòa Hiệp Nam, quận Liên Chiểu, Đà Nẵng khoảng 2km về hướng
+          Đông Nam, nơi đây có một dải đá ngầm, ngư dân trong vùng gọi là rạn Nam Ô. Rạn Nam Ô có nhiều rong tảo nên là
+          nơi trú ngụ của nhiều loài cá và hải sản quý.</p>
+      </div>
+    </div>
+    <div class="post-img-center">
+      <img class="post-img" src="https://th.bing.com/th/id/OIP.fY0oeQsGi9QFDOzC7_FB7wHaE8?rs=1&pid=ImgDetMain"
+        alt="Rạn Nam Ô">
+    </div>
+
+    <!-- Chợ Cồn -->
+    <div class="place">
+      <div class="place-icon"><i class="fa-solid fa-store"></i></div>
+      <div class="place-content">
+        <h3>Chợ Cồn</h3>
+        <p>Chợ Cồn là khu mua bán lớn nhất TP. Đà Nẵng và khu vực miền Trung. Lượng khách đến với chợ Cồn hiện nay không
+          chỉ đơn thuần để mua sắm mà đây còn là điểm tham quan hấp dẫn của du lịch Đà Nẵng. Chợ nằm ở ngã tư đường Hùng
+          Vương – Ông Ích Khiêm thuộc phường Hải Châu II, quận Hải Châu.</p>
+      </div>
+    </div>
+    <div class="post-img-center">
+      <img class="post-img" src="https://th.bing.com/th/id/OIP.TkFpTEBWzP0S8CaenAHbkwHaF4?rs=1&pid=ImgDetMain"
+        alt="Chợ Cồn Đà Nẵng">
+    </div>
+
+    <!-- Cầu khóa tình yêu -->
     <div class="place">
       <div class="place-icon"><i class="fa-solid fa-heart"></i></div>
       <div class="place-content">
-        <h3>Cầu Tình Yêu – Biểu tượng lãng mạn giữa lòng thành phố</h3>
-        <p>
-          Không chỉ là điểm đến của các cặp đôi, Cầu Tình Yêu còn là nơi lưu giữ những lời hứa, ước nguyện ngọt ngào. Với thiết kế uốn lượn mềm mại, lan can được trang trí bằng hàng ngàn ổ khóa tình yêu, cây cầu này đã trở thành “thánh địa” lãng mạn không thể bỏ qua khi đến Đà Nẵng. Đặc biệt, vào buổi tối, ánh đèn lồng đỏ hình trái tim tỏa sáng khắp mặt nước, khiến không gian càng thêm phần thơ mộng.
-        </p>
+        <h3>Cầu khóa tình yêu</h3>
+        <p>Cầu tình yêu nằm ngay đầu cầu Rồng, đường Trần Hưng Đạo, quận Sơn Trà. Đây cũng là một cây cầu được xây dựng
+          làm bến du thuyền. Mọi người đến Cầu tình yêu này không phải mua vé.</p>
+        <p>Cầu có hình vòng cung dài 68m, rộng 6m, hướng về giữa sông và có nhiều không gian để ngắm vẻ đẹp đôi bờ sông
+          Hàn. Buổi tối, hàng trăm chiếc đèn lồng đỏ hình trái tim được thắp sáng, ánh xuống mặt nước khiến cả khu vực
+          trở nên cực kỳ lãng mạn.</p>
       </div>
     </div>
-            <div class="post-img-center">
-      <img class="post-img" src="https://nanotravel.vn/wp-content/uploads/2022/11/cau-tinh-yeu-3.jpg" alt="Cầu Tình Yêu">
-    </div>
-    <div class="place">
-      <div class="place-icon"><i class="fa-solid fa-link"></i></div>
-      <div class="place-content">
-        <h3>Cầu Nguyễn Tri Phương – Kết nối đôi bờ sông Hàn</h3>
-        <p>
-          Cầu Nguyễn Tri Phương đóng vai trò quan trọng trong việc kết nối các khu vực phía Tây thành phố với trung tâm. Với thiết kế hiện đại, cầu không chỉ giúp rút ngắn khoảng cách di chuyển mà còn góp phần giảm tải giao thông cho các tuyến đường chính. Đây cũng là địa điểm lý tưởng để ngắm nhìn toàn cảnh thành phố từ trên cao, đặc biệt là khi hoàng hôn buông xuống.
-        </p>
-      </div>
-    </div>
-            <div class="post-img-center">
-      <img class="post-img" src="https://th.bing.com/th/id/OIP.jbBM-A6Vb7vzmEKq0ra0cwHaE6?o=7&cb=iwp2rm=3&rs=1&pid=ImgDetMain" alt="Cầu Nguyễn Tri Phương">
-    </div>
-    <div class="place">
-      <div class="place-icon"><i class="fa-solid fa-arrows-spin"></i></div>
-      <div class="place-content">
-        <h3>Cầu Sông Hàn – Cây cầu quay duy nhất tại Việt Nam</h3>
-        <p>
-          Cầu Sông Hàn là biểu tượng tự hào của người Đà Nẵng, không chỉ bởi đây là cây cầu quay đầu tiên và duy nhất tại Việt Nam mà còn là minh chứng cho sức sáng tạo, trí tuệ của người Việt. Mỗi đêm, vào khung giờ nhất định, toàn bộ phần giữa của cầu sẽ quay 90 độ, nhường lối cho tàu thuyền qua lại. Hình ảnh cây cầu quay chậm rãi giữa dòng sông Hàn đã trở thành dấu ấn khó quên trong lòng bao thế hệ.
-        </p>
-      </div>
-    </div>
-            <div class="post-img-center">
-      <img class="post-img" src="https://th.bing.com/th/id/OIP.TSVQHhuU8A2X7hNQb-5RXwHaEK?cb=iwp2&rs=1&pid=ImgDetMain" alt="Cầu Sông Hàn">
-    </div>
-    <div class="place">
-      <div class="place-icon"><i class="fa-solid fa-circle-nodes"></i></div>
-      <div class="place-content">
-        <h3>Cầu Hòa Xuân – Công nghệ mới, diện mạo mới</h3>
-        <p>
-          Cuối cùng, không thể không nhắc đến Cầu Hòa Xuân – cây cầu công nghệ mới với thiết kế hiện đại, góp phần hoàn thiện hệ thống giao thông đô thị phía Nam thành phố. Nhờ áp dụng những kỹ thuật xây dựng tiên tiến, cầu Hòa Xuân vừa đảm bảo an toàn, vừa mang đến diện mạo trẻ trung, năng động cho thành phố Đà Nẵng trong thời kỳ hội nhập.
-        </p>
-      </div>
+    <div class="post-img-center">
+      <img class="post-img" src="https://th.bing.com/th/id/OIP.jTv_ygA6U2dXs75Ua84E6wHaHa?rs=1&pid=ImgDetMain"
+        alt="Cầu khóa tình yêu Đà Nẵng">
     </div>
 
+    <!-- Phượt đèo -->
+    <div class="place">
+      <div class="place-icon"><i class="fa-solid fa-mountain"></i></div>
+      <div class="place-content">
+        <h3>Phượt đèo</h3>
+        <p>Di chuyển ra khỏi trung tâm thành phố và cùng tận hưởng những kỉ niệm khó phai khi phượt những ngọn đèo cao
+          chênh vênh núi. Thật tuyệt vời khi được cùng một ai đó phượt những đoạn đèo dốc và thú vị như: Hải Vân, Phước
+          Tượng,.. Thử cảm giác mạnh và bắt gặp hình ảnh tuyệt đẹp của vịnh biển Lăng Cô – Vịnh biển đẹp nhất thế giới
+          tại đây.</p>
+      </div>
+    </div>
+    <div class="post-img-center">
+      <img class="post-img" src="https://th.bing.com/th/id/OIP.fPTTYC0IKKLg3pUdPEYRtgHaE8?rs=1&pid=ImgDetMain"
+        alt="Đèo Hải Vân Đà Nẵng">
+    </div>
     <div class="highlight">
-      Nếu có dịp đến Đà Nẵng, đừng quên trải nghiệm và ghi lại những khoảnh khắc đáng nhớ bên những cây cầu đẹp như mơ này!
+      Đà Nẵng còn rất nhiều điểm đến hấp dẫn khác đang chờ bạn tự mình khám phá!
     </div>
   </div>
 </body>
+
 </html>
