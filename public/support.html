@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Du lịch Đà Nẵng - BWD2025</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+  <link rel="stylesheet" href="css/support.css">
+  <script src="js/support.js"></script>
+</head>
+<!-- Popup Login Modal -->
+<div id="loginModal" class="modal">
+  <div class="modal-content">
+    <span class="close-modal">&times;</span>
+    <h2>Đăng nhập tài khoản</h2>
+    <form id="loginForm" autocomplete="off">
+      <div class="form-group">
+        <label for="username"><i class="fa-regular fa-user"></i> Tên đăng nhập</label>
+        <input type="text" id="username" name="username" required placeholder="Nhập tên đăng nhập">
+      </div>
+      <div class="form-group">
+        <label for="password"><i class="fa-solid fa-lock"></i> Mật khẩu</label>
+        <input type="password" id="password" name="password" required placeholder="Nhập mật khẩu">
+      </div>
+      <button type="submit" class="login-submit-btn">Đăng nhập</button>
+    </form>
+    <div id="loginMessage" style="margin-top:12px;font-size:15px"></div>
+  </div>
+</div>
+
+<body>
+  <!-- Header -->
+  <div class="header">
+    <div class="logo">
+      <img src="C:\Users\manhh\OneDrive\Pictures\Screenshots\Ảnh chụp màn hình 2025-04-16 082125.png"
+        alt="Đà Nẵng Trip Logo">
+    </div>
+    <div class="right">
+      <span class="hotline"><i class="fa-solid fa-headset"></i> 0788 0646 458</span>
+      <button class="login-btn">Đăng xuất</button>
+    </div>
+  </div>
+  <!-- Navbar -->
+  <div class="navbar">
+    <a class="nav-item " href="trangchu.html"><i class="fa-solid fa-book"></i>Cẩm nang</a>
+    <a class="nav-item" href="khachsan.html"><i class="fa-solid fa-building"></i>Khách sạn</a>
+    <a class="nav-item" href="combodulich.html"><i class="fa-solid fa-suitcase-rolling"></i>Combo du lịch</a>
+    <a class="nav-item active" href="hotrokhachhang.html"><i class="fa-solid fa-headset"></i>Hỗ trợ khách hàng</a>
+  </div>
+  <!-- Banner -->
+  <div class="banner">
+    <div class="banner-title">Đà Nẵng</div>
+  </div>
+  <!-- Main content -->
+  <div class="main-content">
+    <h1>Câu hỏi thường gặp</h1>
+    <div class="faq-section">
+      <div class="faq-item">
+        <div class="faq-question">Làm thế nào để đặt phòng?</div>
+        <div class="faq-answer">Bạn có thể đặt phòng thông qua trang web hoặc liên hệ hotline: 0788 0646 458.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Hủy phòng có mất phí không?</div>
+        <div class="faq-answer">Chính sách hủy phòng phụ thuộc vào từng khách sạn. Hãy kiểm tra chi tiết trước khi đặt.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">Thời điểm nào đẹp nhất để du lịch Đà Nẵng?</div>
+        <div class="faq-answer">Từ tháng 3 đến tháng 8 là thời điểm lý tưởng với thời tiết nắng đẹp, ít mưa.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">Cầu Rồng phun lửa vào thời gian nào?</div>
+        <div class="faq-answer">Vào lúc 21h tối Thứ Bảy, Chủ Nhật và các ngày lễ.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">Bà Nà Hills có gì hấp dẫn?</div>
+        <div class="faq-answer">Bà Nà Hills nổi bật với Cầu Vàng, khu vui chơi Fantasy Park và khí hậu mát mẻ quanh năm.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">Có nên thuê xe máy ở Đà Nẵng không?</div>
+        <div class="faq-answer">Rất nên, nếu bạn muốn tự do khám phá. Giá thuê khoảng 100.000 – 150.000đ/ngày.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">Ăn gì ngon khi đến Đà Nẵng?</div>
+        <div class="faq-answer">Bạn nên thử mì Quảng, bánh tráng cuốn thịt heo, bún chả cá và các món hải sản.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">Từ Đà Nẵng đi Hội An bao xa?</div>
+        <div class="faq-answer">Khoảng 30km, mất khoảng 45 phút đi xe máy hoặc ô tô.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">Bãi biển nào đẹp nhất ở Đà Nẵng?</div>
+        <div class="faq-answer">Bãi biển Mỹ Khê là nổi tiếng nhất, được bình chọn là một trong những bãi biển quyến rũ
+          nhất hành tinh.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">Đà Nẵng có sân bay quốc tế không?</div>
+        <div class="faq-answer">Có, Sân bay Quốc tế Đà Nẵng kết nối trực tiếp với nhiều thành phố trong và ngoài nước.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">Nên mua quà gì ở Đà Nẵng?</div>
+        <div class="faq-answer">Bạn có thể mua tré Bà Đệ, mực rim, rong biển Mỹ Khê, bánh khô mè Cẩm Lệ làm quà.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">Đà Nẵng có dịch vụ đưa đón sân bay không?</div>
+        <div class="faq-answer">Nhiều khách sạn và công ty cung cấp dịch vụ đưa đón sân bay với mức giá hợp lý.</div>
+      </div>
+
+    </div>
+  </div>
+  <!-- Chatbox -->
+  <div class="chatbox" id="chatbox">
+    <div class="chatbox-header">
+      Hỗ trợ khách hàng
+      <span class="close-chat">&times;</span>
+    </div>
+    <div class="chatbox-content" id="chatboxContent">
+      <div class="message bot">
+        <div class="message-text">Xin chào! Tôi có thể giúp gì cho bạn?</div>
+      </div>
+    </div>
+    <div class="chatbox-input">
+      <input type="text" id="chatInput" placeholder="Nhập câu hỏi...">
+      <button id="sendMessage">Gửi</button>
+    </div>
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Du lịch Đà Nẵng - BWD2025</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+  <link rel="stylesheet" href="css/hotel.css">
+  <script src="js/hotel.js"></script>
+</head>
+<!-- Popup Login Modal -->
+<div id="loginModal" class="modal">
+  <div class="modal-content">
+    <span class="close-modal">&times;</span>
+    <h2>Đăng nhập tài khoản</h2>
+    <form id="loginForm" autocomplete="off">
+      <div class="form-group">
+        <label for="username"><i class="fa-regular fa-user"></i> Tên đăng nhập</label>
+        <input type="text" id="username" name="username" required placeholder="Nhập tên đăng nhập">
+      </div>
+      <div class="form-group">
+        <label for="password"><i class="fa-solid fa-lock"></i> Mật khẩu</label>
+        <input type="password" id="password" name="password" required placeholder="Nhập mật khẩu">
+      </div>
+      <button type="submit" class="login-submit-btn">Đăng nhập</button>
+    </form>
+    <div id="loginMessage" style="margin-top:12px;font-size:15px"></div>
+  </div>
+</div>
+
+<body>
+  <!-- Header -->
+  <div class="header">
+    <div class="logo">
+      <img src="C:\Users\manhh\OneDrive\Pictures\Screenshots\Ảnh chụp màn hình 2025-04-16 082125.png"
+        alt="DaNangTrip Logo">
+    </div>
+    <div class="right">
+      <span class="hotline"><i class="fa-solid fa-headset"></i>0788 0646 458</span>
+      <button class="login-btn">Đăng nhập</button>
+    </div>
+  </div>
+  <!-- Nav -->
+  <div class="navbar">
+    <a class="nav-item" href="trangchu.html"><i class="fa-solid fa-book"></i>Cẩm nang</a>
+    <a class="nav-item active" href="khachsan.html"><i class="fa-solid fa-building"></i>Khách sạn</a>
+    <a class="nav-item" href="combodulich.html"><i class="fa-solid fa-suitcase-rolling"></i>Combo du lịch</a>
+    <a class="nav-item" href="hotrokhachhang.html"><i class="fa-solid fa-headset"></i>Hỗ trợ khách hàng</a>
+  </div>
+  <!-- Banner -->
+  <div class="banner">
+    <div class="banner-title">Đà Nẵng</div>
+  </div>
+  <!-- Main content -->
+  <div class="main-content">
+    <div class="post-list">
+      <!-- Post 1 -->
+      <div class="post-row">
+        <img class="post-img" src="https://th.bing.com/th/id/OIP.SrmLuheljR-zyp_mEz9KHAHaEf?rs=1&pid=ImgDetMain"
+          alt="Dylan Hotel Danang">
+        <div class="post-content">
+          <div class="post-title">
+            <a href="#" style="text-decoration: none; color: inherit;">Dylan Hotel Danang</a>
+          </div>
+          <div class="post-meta">
+            <p>📍 Khách sạn ở biển Mĩ Khê, Đà Nẵng</p>
+
+          </div>
+          <div class="post-desc">
+            Nằm giáp biển, Dylan Hotel Danang cung cấp chỗ nghỉ 4 sao ở Đà Nẵng, đồng thời có hồ bơi ngoài trời, sân
+            hiên và nhà hàng. Với quầy bar, chỗ nghỉ nằm cách Bãi biển Mỹ Khê chưa đến 1 km.
+          </div>
+          <div class="rating">⭐⭐⭐⭐</div>
+          <p>Giá từ: </p>
+          <div class="price">VND 606.375</div>
+        </div>
+      </div>
+      <!-- Post 2 -->
+      <div class="post-row">
+        <img class="post-img" src="https://th.bing.com/th/id/OIP.Bg9muGvWMrJj7RaHMtmxhQHaE8?rs=1&pid=ImgDetMain"
+          alt="Thành Hoàng Châu Boutique Hotel">
+        <div class="post-content">
+          <div class="post-title">Thành Hoàng Châu Boutique Hotel</div>
+          <div class="post-meta">
+            <p>📍Khách sạn ở Trung tâm Thành phố Đà Nẵng, Đà Nẵng</p>
+          </div>
+          <div class="post-desc">
+            Tọa lạc tại thành phố Đà Nẵng, Thành Hoàng Châu Boutique Hotel chỉ cách Bảo tàng Chăm 5 phút đi xe. Khách
+            sạn có sân hiên, bồn tắm nước nóng và nhà hàng trong khuôn viên.
+          </div>
+          <div class="rating">⭐⭐⭐</div>
+          <p>Giá từ: </p>
+          <div class="price">VND 1.200.000</div>
+        </div>
+      </div>
+      <!-- Post 3 -->
+      <div class="post-row">
+        <img class="post-img" src="https://th.bing.com/th/id/OIP.zJifSdTMIkBDA8DqB2FMCgHaFj?rs=1&pid=ImgDetMain"
+          alt="Menora Grand Da Nang">
+        <div class="post-content">
+          <div class="post-title">
+            <a href="#" style="text-decoration: none; color: inherit;">Menora Grand Da Nang</a>
+          </div>
+          <div class="post-meta">
+            <p>📍 Khách sạn ở biển Mĩ Khê, Đà Nẵng</p>
+
+          </div>
+          <div class="post-desc">
+            Tọa lạc ở Đà Nẵng và cách Bãi biển Mỹ Khê 4 phút đi bộ, Menora Grand Da Nang cung cấp dịch vụ tiền sảnh, các
+            phòng không hút thuốc, hồ bơi ngoài trời, Wi-Fi miễn phí ở toàn bộ chỗ nghỉ và phòng chờ...
+          </div>
+          <div class="rating">⭐⭐⭐⭐</div>
+          <p>Giá từ: </p>
+          <div class="price">VND 569.964</div>
+        </div>
+      </div>
+      <!-- Post 4 -->
+      <div class="post-row">
+        <img class="post-img" src="https://th.bing.com/th/id/OIP.nZXomXUSVCYmvKY7a1OaCAHaE7?rs=1&pid=ImgDetMain"
+          alt="Phuc Thanh Luxury Hotel by THG">
+        <div class="post-content">
+          <div class="post-title">
+            <a href="#" style="text-decoration: none; color: inherit;">Phuc Thanh Luxury Hotel by THG</a>
+          </div>
+          <div class="post-meta">
+            <p>📍 Khách sạn ở biển Mĩ Khê, Đà Nẵng</p>
+
+          </div>
+          <div class="post-desc">
+            Nằm ở Đà Nẵng, cách Bãi biển Mỹ Khê 8 phút đi bộ, Phuc Thanh Luxury Hotel by THG cung cấp chỗ nghỉ có phòng
+            chờ chung, chỗ đậu xe riêng miễn phí, sân hiên và quầy bar.
+          </div>
+          <div class="rating">⭐⭐⭐</div>
+          <p>Giá từ: </p>
+          <div class="price">VND 446.250</div>
+        </div>
+      </div>
+      <!-- Post 5 -->
+      <div class="post-row">
+        <img class="post-img" src="https://th.bing.com/th/id/OIP.H29UG-_BVlEF59dLNBURtQHaHZ?rs=1&pid=ImgDetMain"
+          alt="Everland Hotel">
+        <div class="post-content">
+          <div class="post-title">
+            <a href="#" style="text-decoration: none; color: inherit;">Everland Hotel</a>
+          </div>
+          <div class="post-meta">
+            <p>📍 Khách sạn ở biển Mĩ Khê, Đà Nẵng</p>
+
+          </div>
+          <div class="post-desc">
+            Nằm ở Đà Nẵng, cách Bãi biển Mỹ Khê 12 phút đi bộ, Everland Hotel cung cấp chỗ nghỉ có hồ bơi ngoài trời,
+            chỗ đậu xe riêng miễn phí, phòng chờ chung và sân hiên.
+          </div>
+          <div class="rating">⭐⭐⭐⭐</div>
+          <p>Giá từ: </p>
+          <div class="price">VND 821.632</div>
+        </div>
+      </div>
+      <!-- Post 6 -->
+      <div class="post-row">
+        <img class="post-img" src="https://th.bing.com/th/id/OIP.IJQGm21r4nBB7TGaGKkIbQHaE8?rs=1&pid=ImgDetMain"
+          alt="Gio Bien 2 Hotel by THG">
+        <div class="post-content">
+          <div class="post-title">
+            <a href="#" style="text-decoration: none; color: inherit;">Gio Bien 2 Hotel by THG</a>
+          </div>
+          <div class="post-meta">
+            <p>📍 Khách sạn ở biển Mĩ Khê, Đà Nẵng</p>
+
+          </div>
+          <div class="post-desc">
+            Tọa lạc ở Đà Nẵng, cách Bãi biển Mỹ Khê 3 phút đi bộ, Gio Bien 2 Hotel by THG cung cấp chỗ nghỉ có khu vườn,
+            chỗ đậu xe riêng miễn phí, phòng chờ chung và sân hiên..
+          </div>
+          <div class="rating">⭐⭐⭐</div>
+          <p>Giá từ: </p>
+          <div class="price">VND 425.000</div>
+        </div>
+      </div>
+      <!-- Post 7 -->
+      <div class="post-row">
+        <img class="post-img" src="https://th.bing.com/th/id/OIP.qyhig6rG6Cs1S53lT2YCoAHaE8?rs=1&pid=ImgDetMain"
+          alt="Valencia Da Nang Beach Hotel">
+        <div class="post-content">
+          <div class="post-title">
+            <a href="#" style="text-decoration: none; color: inherit;">Valencia Da Nang Beach Hotel</a>
+          </div>
+          <div class="post-meta">
+            <p>📍 Khách sạn ở biển Mĩ Khê, Đà Nẵng</p>
+
+          </div>
+          <div class="post-desc">
+            Nằm ở Đà Nẵng và cách Bãi biển Mỹ Khê 8 phút đi bộ, Valencia Da Nang Beach Hotel cung cấp dịch vụ tiền sảnh,
+            các phòng không gây dị ứng, khu vực bãi biển riêng, Wi-Fi miễn phí ở toàn bộ chỗ nghỉ và...
+          </div>
+          <div class="rating">⭐⭐⭐</div>
+          <p>Giá từ: </p>
+          <div class="price">VND 756.000</div>
+        </div>
+      </div>
+      <!-- Post 8 -->
+      <div class="post-row">
+        <img class="post-img" src="https://th.bing.com/th/id/OIP.veujvB1A_Rrrb5QVJtViEwHaFj?rs=1&pid=ImgDetMain"
+          alt="De Lamour Hotel Da Nan">
+        <div class="post-content">
+          <div class="post-title">
+            <a href="#" style="text-decoration: none; color: inherit;">De Lamour Hotel Da Nan</a>
+          </div>
+          <div class="post-meta">
+            <p>📍 Khách sạn ở biển Mĩ Khê, Đà Nẵng</p>
+
+          </div>
+          <div class="post-desc">
+            Nằm giáp biển, De Lamour Hotel Da Nang cung cấp chỗ nghỉ 4 sao ở Đà Nẵng, đồng thời có hồ bơi ngoài trời,
+            khu vườn và khu vực bãi biển riêng.
+          </div>
+          <div class="rating">⭐⭐⭐⭐</div>
+          <p>Giá từ: </p>
+          <div class="price">VND 770.000</div>
+        </div>
+      </div>
+      <!-- Post 9 -->
+      <div class="post-row">
+        <img class="post-img" src="https://th.bing.com/th/id/OIP.YpNgwdiDuI1UNqqU2kZ97wHaE8?rs=1&pid=ImgDetMain"
+          alt="Golden Star Hotel by THG">
+        <div class="post-content">
+          <div class="post-title">
+            <a href="#" style="text-decoration: none; color: inherit;">Golden Star Hotel by THG</a>
+          </div>
+          <div class="post-meta">
+            <p>📍 Khách sạn ở biển Mĩ Khê, Đà Nẵng</p>
+
+          </div>
+          <div class="post-desc">
+            Golden Star Hotel by THG tọa lạc gần trung tâm thành phố Đà Nẵng, chỉ cách sân bay quốc tế Đà Nẵng 5 km. Chỗ
+            nghỉ này nằm ở vị trí thuận tiện chỉ cách bãi biển Mỹ Khê 2 phút đi bộ.
+          </div>
+          <div class="rating">⭐⭐⭐⭐</div>
+          <p>Giá từ: </p>
+          <div class="price">VND 380.250</div>
+        </div>
+      </div>
+      <!-- Post 10 -->
+      <div class="post-row">
+        <img class="post-img"
+          src="https://cf.bstatic.com/xdata/images/hotel/max500/493009194.jpg?k=4a898e01da554f86a4cbd8ab62ca0cde3a3595d4e37c3786e709118dab1cbf30&o="
+          alt="The Glomad Boutique Danang">
+        <div class="post-content">
+          <div class="post-title">
+            <a href="#" style="text-decoration: none; color: inherit;">The Glomad Boutique Danang</a>
+          </div>
+          <div class="post-meta">
+            <p>📍 Khách sạn ở biển Mĩ Khê, Đà Nẵng</p>
+
+          </div>
+          <div class="post-desc">
+            The Glomad Da Nang Hotel cung cấp chỗ nghỉ với sân hiên tại thành phố Đà Nẵng, cách Cầu Sông Hàn 2,3 km, Cầu
+            tàu tình yêu 2,4 km, Bảo tàng Chăm 3 km và Trung tâm thương mại Indochina Riverside 3,8 km....
+          </div>
+          <div class="rating"></div>
+          <p>Giá từ: </p>
+          <div class="price">VND 694.665</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,457 @@
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background: #f6f7fb;
+    margin: 0;
+    color: #222;
+}
+
+.header,
+.navbar {
+    z-index: 20;
+}
+
+/* Header */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 38px 10px 22px;
+    background: #fff;
+    border-bottom: 1px solid #e9e9e9;
+}
+
+.header .logo img {
+    height: 38px;
+}
+
+.header .right {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.header .hotline {
+    color: #ff9800;
+    font-weight: 500;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin-right: 8px;
+}
+
+.header .login-btn {
+    color: #1a73e8;
+    border: 2px solid #1a73e8;
+    background: #fff;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 7px 18px;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+
+.header .login-btn:hover {
+    background: #1a73e8;
+    color: #fff;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    background: #fff;
+    border-bottom: 1px solid #f4e5d0;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.navbar .nav-item {
+    flex: 1;
+    text-align: center;
+    padding: 20px 0 14px 0;
+    font-size: 20px;
+    color: #222;
+    cursor: pointer;
+    font-weight: 500;
+    border-bottom: 3px solid transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s, border-color 0.2s;
+    background: #fff;
+    gap: 8px;
+}
+
+.navbar .nav-item.active,
+.navbar .nav-item:hover {
+    background: #f8f6f1;
+    border-bottom: 3px solid #f7a600;
+    color: #f7a600;
+}
+
+.navbar .nav-item i {
+    font-size: 28px;
+    margin-bottom: 4px;
+}
+
+.navbar .nav-item {
+    text-decoration: none;
+    /* ← Thêm dòng này để xóa gạch chân */
+}
+
+/* Banner */
+.banner {
+    width: 100%;
+    height: 270px;
+    background-image: url('https://i.pinimg.com/736x/74/c5/a9/74c5a98990874b7118e7c48d07fe1f46.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0;
+}
+
+.banner-title {
+    color: #fff;
+    font-size: 56px;
+    font-weight: 700;
+    text-shadow: 0 2px 14px rgba(0, 0, 0, 0.25);
+    position: absolute;
+    bottom: 70px;
+    left: 60px;
+}
+
+/* Main content */
+.main-content {
+    max-width: 1350px;
+    margin: 0 auto;
+    padding: 32px 24px 30px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.post-list {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.post-row {
+    background: #fff;
+    border-radius: 10px;
+    display: flex;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+    min-height: 210px;
+    padding: 20px;
+    align-items: center;
+    gap: 20px;
+}
+
+.post-img {
+    width: 30%;
+    background: #eee;
+    height: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.post-content {
+    flex: 1;
+}
+
+.post-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.post-meta {
+    font-size: 14px;
+    color: #666;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 7px;
+}
+
+.post-meta i {
+    color: #b0b0b0;
+}
+
+.post-desc {
+    font-size: 14px;
+    color: #444;
+    line-height: 1.5;
+    margin-top: 5px;
+}
+
+.rating {
+    color: #f39c12;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.price {
+    font-size: 18px;
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+@media (max-width: 1050px) {
+    .banner-title {
+        font-size: 36px;
+    }
+
+    .main-content {
+        padding: 10px 3vw 30px 3vw;
+    }
+}
+
+@media (max-width: 700px) {
+
+    .header,
+    .navbar {
+        padding-left: 4vw;
+        padding-right: 4vw;
+    }
+
+    .main-content {
+        padding: 14px 1vw 30px 1vw;
+    }
+}
+
+/* Modal Background */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+    background: rgba(22, 24, 30, 0.34);
+    transition: background 0.3s;
+}
+
+/* Modal Content */
+.modal-content {
+    background: #fff;
+    margin: 60px auto 0 auto;
+    border-radius: 10px;
+    padding: 34px 28px 24px 28px;
+    max-width: 360px;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.18);
+    position: relative;
+    animation: modalFadeIn 0.35s;
+}
+
+@keyframes modalFadeIn {
+    from {
+        transform: translateY(-40px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Close Button */
+.close-modal {
+    color: #888;
+    position: absolute;
+    top: 13px;
+    right: 19px;
+    font-size: 27px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.close-modal:hover {
+    color: #f44336;
+}
+
+.modal-content h2 {
+    margin-top: 0;
+    font-size: 25px;
+    color: #1a73e8;
+    text-align: center;
+    margin-bottom: 26px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.form-group {
+    margin-bottom: 17px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 6px;
+    color: #222;
+    font-size: 15px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.form-group input {
+    padding: 10px 11px;
+    border: 1.2px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 15px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.form-group input:focus {
+    border-color: #1a73e8;
+}
+
+.login-submit-btn {
+    width: 100%;
+    background: #1a73e8;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 11px 0;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 8px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.login-submit-btn:hover {
+    background: #006ad7;
+}
+
+@media (max-width:600px) {
+    .modal-content {
+        max-width: 99vw;
+        padding: 18px 7vw 14px 7vw;
+    }
+
+    .modal {
+        padding: 0;
+    }
+}
+
+.chatbox {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 320px;
+    max-height: 70vh;
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.chatbox-header {
+    background: #1a73e8;
+    color: #fff;
+    padding: 12px 16px;
+    font-size: 18px;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chatbox-header .close-chat {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.chatbox-content {
+    flex: 1;
+    padding: 16px;
+    overflow-y: auto;
+}
+
+.message {
+    margin-bottom: 12px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.message.user {
+    justify-content: flex-end;
+}
+
+.message-text {
+    max-width: 70%;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+.message.bot .message-text {
+    background: #f1f1f1;
+    color: #333;
+}
+
+.message.user .message-text {
+    background: #1a73e8;
+    color: #fff;
+}
+
+.chatbox-input {
+    display: flex;
+    border-top: 1px solid #ddd;
+}
+
+.chatbox-input input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    outline: none;
+}
+
+.chatbox-input button {
+    padding: 10px 16px;
+    background: #1a73e8;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.faq-item {
+    margin-bottom: 16px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background: #fff;
+    overflow: hidden;
+}
+
+.faq-item .faq-question {
+    padding: 14px 18px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    background: #f8f8f8;
+}
+
+.faq-item .faq-answer {
+    padding: 14px 18px;
+    display: none;
+    font-size: 15px;
+    color: #555;
+}

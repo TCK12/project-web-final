@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Du lịch Đà Nẵng - BWD2025</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', Arial, sans-serif;
+      background: #f6f7fb;
+      margin: 0;
+      color: #222;
+    }
+    /* Header */
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 38px 10px 22px;
+      background: #fff;
+      border-bottom: 1px solid #e9e9e9;
+      position: relative;
+      z-index: 20;
+    }
+    .header .logo img {
+      height: 38px;
+    }
+    .header .right {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+    .header .hotline {
+      color: #ff9800;
+      font-weight: 500;
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      margin-right: 8px;
+    }
+    .header .login-btn {
+      color: #1a73e8;
+      border: 2px solid #1a73e8;
+      background: #fff;
+      border-radius: 6px;
+      font-size: 16px;
+      font-weight: 500;
+      padding: 7px 18px;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+    }
+    .header .login-btn:hover {
+      background: #1a73e8;
+      color: #fff;
+    }
+    /* Navbar */
+    .navbar {
+      display: flex;
+      background: #fff;
+      border-bottom: 1px solid #f4e5d0;
+      justify-content: center;
+      align-items: stretch;
+      z-index: 15;
+      position: relative;
+    }
+    .navbar .nav-item {
+  text-decoration: none; /* ← Thêm dòng này để xóa gạch chân */
+}
+    .navbar .nav-item {
+      flex: 1;
+      text-align: center;
+      padding: 20px 0 14px 0;
+      font-size: 20px;
+      color: #222;
+      cursor: pointer;
+      font-weight: 500;
+      border-bottom: 3px solid transparent;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s, border-color 0.2s;
+      background: #fff;
+      gap: 8px;
+    }
+    .navbar .nav-item.active,
+    .navbar .nav-item:hover {
+      background: #f8f6f1;
+      border-bottom: 3px solid #f7a600;
+      color: #f7a600;
+    }
+    .navbar .nav-item i {
+      font-size: 28px;
+      margin-bottom: 4px;
+    }
+    /* Banner */
+    .banner {
+      width: 100%;
+      height: 270px;
+      background-image: url('https://i.pinimg.com/736x/74/c5/a9/74c5a98990874b7118e7c48d07fe1f46.jpg');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 0;
+    }
+    .banner-title {
+      color: #fff;
+      font-size: 56px;
+      font-weight: 700;
+      text-shadow: 0 2px 14px rgba(0,0,0,0.25);
+      position: absolute;
+      bottom: 70px;
+      left: 60px;
+    }
+    /* Main Content */
+    .main-content {
+      max-width: 900px;
+      margin: 34px auto 0 auto;
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.07);
+      padding: 38px 20px 38px 28px;
+    }
+    .main-content h1,
+    .main-content h2,
+    .main-content h3 {
+      color: #f7a600;
+      margin-top: 24px;
+      margin-bottom: 12px;
+      font-weight: 700;
+    }
+    .main-content h1 {
+      font-size: 34px;
+    }
+    .main-content h2 {
+      font-size: 26px;
+    }
+    .main-content h3 {
+      font-size: 21px;
+    }
+    .main-content ul,
+    .main-content ol {
+      margin: 15px 0 15px 30px;
+      line-height: 1.7;
+    }
+    .main-content p {
+      margin: 13px 0;
+      font-size: 17px;
+      line-height: 1.7;
+    }
+    .main-content .highlight {
+      background: #fff8e1;
+      border-left: 4px solid #f7a600;
+      padding: 10px 14px;
+      margin: 20px 0;
+      border-radius: 7px;
+      font-weight: 500;
+      font-size: 16px;
+    }
+    .main-content .place {
+      display: flex;
+      align-items: flex-start;
+      gap: 22px;
+      margin-bottom: 26px;
+      border-bottom: 1px solid #f3e8d5;
+      padding-bottom: 20px;
+    }
+    .main-content .place:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+    .main-content .place-icon {
+      font-size: 40px;
+      color: #ffa200;
+      flex-shrink: 0;
+      margin-top: 3px;
+    }
+    .main-content .place-content {
+      flex: 1;
+    }
+    /* Responsive */
+    @media (max-width: 700px) {
+      .banner-title {
+        font-size: 32px;
+        left: 18px;
+        bottom: 30px;
+      }
+      .main-content {
+        padding: 18px 8px 24px 8px;
+      }
+      .header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        padding: 14px 10px 10px 10px;
+      }
+      .navbar .nav-item {
+        font-size: 15px;
+        padding: 13px 0 9px 0;
+      }
+      .main-content h1 {
+        font-size: 23px;
+      }
+      .main-content h2 {
+        font-size: 18px;
+      }
+      .main-content h3 {
+        font-size: 15px;
+      }
+      .main-content {
+        max-width: 100%;
+      }
+    }
+      .post-img-center {
+      display: flex;
+      justify-content: center;
+      margin: 22px 0;
+    }
+    .post-img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.09);
+    }
+
+  </style>
+</head>
+<!-- Popup Login Modal -->
+<div id="loginModal" class="modal">
+  <div class="modal-content">
+    <span class="close-modal">&times;</span>
+    <h2>Đăng nhập tài khoản</h2>
+    <form id="loginForm" autocomplete="off">
+      <div class="form-group">
+        <label for="username"><i class="fa-regular fa-user"></i> Tên đăng nhập</label>
+        <input type="text" id="username" name="username" required placeholder="Nhập tên đăng nhập">
+      </div>
+      <div class="form-group">
+        <label for="password"><i class="fa-solid fa-lock"></i> Mật khẩu</label>
+        <input type="password" id="password" name="password" required placeholder="Nhập mật khẩu">
+      </div>
+      <button type="submit" class="login-submit-btn">Đăng nhập</button>
+    </form>
+    <div id="loginMessage" style="margin-top:12px;font-size:15px"></div>
+  </div>
+</div>
+
+<style>
+/* Modal Background */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0; top: 0;
+  width: 100vw; height: 100vh;
+  overflow: auto;
+  background: rgba(22, 24, 30, 0.34);
+  transition: background 0.3s;
+}
+
+/* Modal Content */
+.modal-content {
+  background: #fff;
+  margin: 60px auto 0 auto;
+  border-radius: 10px;
+  padding: 34px 28px 24px 28px;
+  max-width: 360px;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.18);
+  position: relative;
+  animation: modalFadeIn 0.35s;
+}
+@keyframes modalFadeIn {
+  from { transform: translateY(-40px); opacity: 0;}
+  to   { transform: translateY(0); opacity: 1;}
+}
+
+/* Close Button */
+.close-modal {
+  color: #888;
+  position: absolute;
+  top: 13px; right: 19px;
+  font-size: 27px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.close-modal:hover { color: #f44336; }
+
+.modal-content h2 {
+  margin-top: 0;
+  font-size: 25px;
+  color: #1a73e8;
+  text-align: center;
+  margin-bottom: 26px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.form-group {
+  margin-bottom: 17px;
+  display: flex;
+  flex-direction: column;
+}
+.form-group label {
+  margin-bottom: 6px;
+  color: #222;
+  font-size: 15px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.form-group input {
+  padding: 10px 11px;
+  border: 1.2px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.form-group input:focus {
+  border-color: #1a73e8;
+}
+
+.login-submit-btn {
+  width: 100%;
+  background: #1a73e8;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 11px 0;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.login-submit-btn:hover {
+  background: #006ad7;
+}
+@media (max-width:600px){
+  .modal-content { max-width: 99vw; padding: 18px 7vw 14px 7vw;}
+  .modal { padding: 0; }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const modal = document.getElementById('loginModal');
+  const btn = document.querySelector('.login-btn');
+  const close = document.querySelector('.close-modal');
+  const form = document.getElementById('loginForm');
+  const msg = document.getElementById('loginMessage');
+
+  // Check login state from localStorage
+  function isLoggedIn() {
+    return localStorage.getItem('isLoggedIn') === 'true';
+  }
+
+  function setLoggedIn(loggedIn) {
+    localStorage.setItem('isLoggedIn', loggedIn ? 'true' : 'false');
+  }
+
+  function updateLoginButton() {
+    if (isLoggedIn()) {
+      btn.textContent = 'Đăng xuất';
+      btn.classList.add('logout-btn');
+      btn.classList.remove('login-btn');
+      btn.style.color = "#f44336";
+      btn.style.borderColor = "#f44336";
+      btn.style.background = "#fff";
+    } else {
+      btn.textContent = 'Đăng nhập';
+      btn.classList.add('login-btn');
+      btn.classList.remove('logout-btn');
+      btn.style.color = "#1a73e8";
+      btn.style.borderColor = "#1a73e8";
+      btn.style.background = "#fff";
+    }
+  }
+
+  // Initial button state
+  updateLoginButton();
+
+  // Button click handler
+  btn.addEventListener('click', function(e) {
+    if (isLoggedIn()) {
+      // Đăng xuất
+      setLoggedIn(false);
+      updateLoginButton();
+      e.preventDefault();
+      alert('Bạn đã đăng xuất!');
+    } else {
+      // Đăng nhập
+      e.preventDefault();
+      modal.style.display = 'block';
+      msg.textContent = '';
+      form.reset();
+      setTimeout(() => {
+        document.getElementById('username').focus();
+      }, 200);
+    }
+  });
+
+  // Close modal
+  close.onclick = function() { modal.style.display = 'none'; }
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  };
+
+  // Đăng nhập logic (demo)
+  form.onsubmit = function(e) {
+    e.preventDefault();
+    const username = form.username.value.trim();
+    const password = form.password.value;
+    // Demo: accept username 'admin' and password '123456'
+    if(username === 'admin' && password === '123456'){
+      msg.style.color = '#2ecc40';
+      msg.innerHTML = '<i class="fa-solid fa-circle-check"></i> Đăng nhập thành công!';
+      setLoggedIn(true);
+      updateLoginButton();
+      setTimeout(() => { modal.style.display = 'none'; }, 900);
+    } else {
+      msg.style.color = '#e74c3c';
+      msg.innerHTML = '<i class="fa-solid fa-circle-exclamation"></i> Tên đăng nhập hoặc mật khẩu không đúng!';
+    }
+  }
+});
+</script>
+<body>
+  <!-- Header -->
+<div class="header">
+    <div class="logo">
+      <img src="C:\Users\manhh\OneDrive\Pictures\Screenshots\Ảnh chụp màn hình 2025-04-16 082125.png" alt="DaNangTrip Logo">
+    </div>
+    <div class="right">
+      <span class="hotline"><i class="fa-solid fa-headset"></i>0788 0646 458</span>
+      <button class="login-btn">Đăng nhập</button>
+    </div>
+  </div>
+<!-- Nav -->
+<div class="navbar">
+  <div class="nav-item active">
+    <a href="trangchu.html" style="text-decoration: none; color: inherit;">
+      <i class="fa-solid fa-book"></i>Cẩm nang
+    </a>
+  </div>
+  <a class="nav-item" href="khachsan.html"><i class="fa-solid fa-building"></i>Khách sạn</a>
+  <a class="nav-item" href="combodulich.html"><i class="fa-solid fa-suitcase-rolling"></i>Combo du lịch</a>
+  <a class="nav-item" href="hotrokhachhang.html"><i class="fa-solid fa-headset"></i>Hỗ trợ khách hàng</a>
+</div>
+  <!-- Banner -->
+  <div class="banner">
+    <div class="banner-title">Đà Nẵng</div>
+  </div>
+  <!-- Main content: 10 món ngon Đà Nẵng -->
+  <div class="main-content">
+    <h1>10 Món Ngon Đà Nẵng “Gây Thương Nhớ” Nhất Định Phải Thử</h1>
+    <p>
+      Đà Nẵng ơi Đà Nẵng? Mi cứ khiến chúng ta phải trầm trồ là sao nhỉ? Cảnh thì đẹp, người thì xinh, đến đồ ăn cũng “ngon quên lối về” thì ai mà chịu nổi? Chà, chắc hẳn bạn đang đoán già đoán non xem trong cả tỉ món ăn thì top 10 món ăn Đà Nẵng gây thương nhớ là gì đúng không? Coi thử nhen. Cùng chúng mình tìm hiểu về TOP 10 món ăn Đà Nẵng này nhé!
+    </p>
+    <div class="highlight">
+      Danh sách món ngon Đà Nẵng dường như cứ dài bất tận ý, nhưng chỉ cần top 10 món ăn Đà Nẵng trên cũng đủ để bạn no căng rồi.
+    </div>
+    <div class="place">
+      <div class="place-icon"><i class="fa-solid fa-fish"></i></div>
+      <div class="place-content">
+        <h3>Gỏi cá Nam Ô</h3>
+        <p>
+          Món đầu tiên nhất định và đừng bao giờ “quên không ăn”, “không dám ăn”, bla bla, sẽ tiếc đứt ruột ý. Cái tên lạ lạ thế thôi nhưng cực ngon bạn ạ. Nhưng vì sao người ta thích gỏi cá Nam Ô đến thế? Gỏi được làm từ cá trích tươi. Là cá tươi đấy nhé.<br><br>
+          Thì cũng không trách những bạn “lần đầu làm chuyện ấy” với món này, vì cảm giác hơi khó ăn, nhưng đừng vội bỏ cuộc nhen, cứ ăn dần dần thử đi, bạn sẽ giống như bị nghiện vậy đó.<br><br>
+          Mà hay nha, cá thì rõ là đồ sống đó, nhưng quái lạ là chả có tí tanh tao nào. Mà cũng đúng. Cá tươi nhưng được làm sạch sẽ, bỏ hết đầu, ruột, vảy và những bộ phận dư thừa khác, còn được nêm thêm chút muối, giấm vào nước để cá được sạch hơn và loại bỏ gần như toàn bộ mùi tanh luôn.<br><br>
+          Chưa hết, gừng, tỏi bỏ vỏ, giã dập trộn cùng chanh ớt, bột ngọt, tý mắm ngon và giấm chính là những phụ gia không thể thiếu khiến món gỏi cứ gọi là đậm đà hết ý. Khi ăn, chỉ thấy đọng lại toàn vị ngọt ngọt, chua, cay nơi đầu lưỡi.
+        </p>
+      </div>
+    </div>
+
+    <div class="post-img-center">
+      <img class="post-img" src="https://th.bing.com/th/id/OIP.qZD97xl6VvHRUbxgNcwZBQHaHN?rs=1&pid=ImgDetMain" alt="Gỏi cá Nam Ô">
+    </div>
+    <div class="place">
+      <div class="place-icon"><i class="fa-solid fa-fish"></i></div>
+      <div class="place-content">
+        <h3>Cá nục cuốn bánh tráng</h3>
+        <p>
+          Xứ biển Đà Nẵng là thiên đường của các loại cá, ăn cá tươi ngán thì chuyển qua cá khô, chán cá khô thì là cá hấp, cái nào cũng hết sảy. Có một món, lạ và độc đáo về cá, phải kể đến là món cá nục cuốn bánh tráng. Cá nục không mắc, ngược lại còn rất rẻ, nhưng dùng loại cá đó làm ra món này thì cực kỳ ngon nha.<br><br>
+          Cá nục được hấp lên nên rất chắc thịt, vị ngọt và tươi vẫn còn vẹn nguyên, không hề tanh và rất dễ ăn. Lấy chút thịt cá, thêm chút dưa leo, rau sống và cuộn tròn trong chiếc bánh tráng nhỏ xinh, chấm chút nước mắm, đưa lên miệng, má ơi, chỉ muốn gào thét lên ngay khoảnh khắc ấy. Đúng là cực phẩm mà.
+        </p>
+      </div>
+    </div>
+
+    <div class="post-img-center">
+      <img class="post-img" src="https://th.bing.com/th/id/OIP.NG5Yqo02xfes2VWT3J5z7wHaFP?rs=1&pid=ImgDetMain" alt="Cá nục cuốn bánh tráng">
+    </div>
+
+    <div class="place">
+      <div class="place-icon"><i class="fa-solid fa-bowl-food"></i></div>
+      <div class="place-content">
+        <h3>Bún mắm</h3>
+        <p>
+          Vô vàn món ngon là thế nhưng bún mắm chưa hề bị đánh bại khỏi top 10 món ăn Đà Nẵng gây thương nhớ. Bạn biết vì sao không? Nào là vị thịt heo quay giòn tan, vị sa tế cay nồng, mùi bò hoi hoi, mùi rau thơm phảng phất và quyện cùng vị mắm nêm đậm đà đến khó cưỡng.<br><br>
+          Đương nhiên người ta sẽ không trộn mắm chung vô luôn đâu, bởi có người thì ăn mặn, người ăn nhạt mà, nên bạn ăn bao nhiêu thì lấy bấy nhiêu, tùy theo khẩu vị.<br><br>
+          Sau khi “nhận hàng”, chỉ cần rưới nhẹ chút mắm lên, đảo đều, chu choa, lúc này ngồi rung đùi, lim dim mắt mà thưởng thức chứ còn gì nữa.<br><br>
+          Mà cảnh báo trước là bún mắm Đà Nẵng thì rất cay đó nhen, cay xé lưỡi là đằng khác. Ngồi ăn tô bún là phải xuýt xoa liên tục mãi không thôi, đương nhiên không cay sẽ bớt vị ngon, mà bún ngon mà thêm vị cay đó thì ăn mãi không ngán được rồi ha.
+        </p>
+      </div>
+    </div>
+
+    <div class="post-img-center">
+      <img class="post-img" src="https://th.bing.com/th/id/OIP.QW8molByZZBOa9hWHXzKGwHaHa?rs=1&pid=ImgDetMain" alt="Bún mắm">
+    </div>
+
+    <div class="place">
+      <div class="place-icon"><i class="fa-solid fa-bowl-rice"></i></div>
+      <div class="place-content">
+        <h3>Mì Quảng</h3>
+        <p>
+          Vô quán order một tô mì quảng, hẳn bạn sẽ mê mẩn khi “nhận hàng”, chợt nhận ra nếu đến Đà Nẵng mà bỏ lỡ món này thì tiếc hùi hụi. Trước hết là nguyên tô ứ ự với sợi mì tươi màu trắng, mềm, được cán dẹt, dày và to bản, thơm mùi gạo nhưng vẫn dai ngon đúng điệu.<br><br>
+          Mà cực cực thích cái vị beo béo dễ chịu của nước dùng, ngọt đậm, thơm ngậy, sóng sánh vàng được rưới đẫm cùng với thịt được tẩm vị, rau tươi, hành hoa, thêm miếng bánh đa để bẻ nhỏ rắc bỏ vô nữa. Quá tuyệt! Mì gà, mì tôm, mì thịt, mì trứng, mì bò, mì sứa, mì cá lóc, mì ếch…menu mì quảng thôi mà cũng đa dạng đủ loại, chắc ăn ngập mặt.
+        </p>
+      </div>
+    </div>
+
+    <div class="post-img-center">
+      <img class="post-img" src="https://th.bing.com/th/id/OIP.FrG_jX_mzlEYLUiqgx4eAgHaEK?rs=1&pid=ImgDetMain" alt="Mì Quảng">
+    </div>
+    <div class="place">
+      <div class="place-icon"><i class="fa-solid fa-bread-slice"></i></div>
+      <div class="place-content">
+        <h3>Phá Lấu</h3>
+        <p>
+          Món ăn vặt rẻ nhưng lại cực ngon luôn cha mạ ơi. Nhất là vào những ngày trời mưa mà được thưởng thức một bát phá lấu nóng hổi, vừa thổi vừa ăn thì không còn gì bằng.<br><br>
+          Trời mưa mưa cứ gọi 1 chén phá lấu nóng hổi, khói bốc nghi ngút rồi xé bánh mì ra chấm cùng nước sốt sánh sánh, thơm mùi nước cốt dừa, thế là ấm lòng lại ngay ý.<br><br>
+          À thành phần chính của phá lấu là lòng bò nhé, nhưng yên tâm đi, các loại lòng đều được chế biến một cách kỹ càng, vì thế khi ăn hoàn toàn không bị hăng mùi khó chịu đâu. Nước dùng của phá lấu thì rất đậm đà,và thơm ngát mùi nước cốt dừa ý, ăn vị là lạ rất hay.
+        </p>
+      </div>
+    </div>
+
+    <div class="post-img-center">
+      <img class="post-img" src="https://th.bing.com/th/id/OIP.IgxxiJW1bzdMmIHrSXarjQHaFj?rs=1&pid=ImgDetMain" alt="Phá Lấu">
+    </div>
+
+    <div class="place">
+      <div class="place-icon"><i class="fa-solid fa-bowl-rice"></i></div>
+      <div class="place-content">
+        <h3>Cao Lầu</h3>
+        <p>
+          Bạn cũng có nghe về cao lầu rồi đúng không? Thực ra đây là món đặc sản riêng của Hội An, nhưng khi đến Đà Nẵng nó được biến tấu theo vị của người Đà Nẵng rất riêng đủ để khiến bạn ngây ngất ngay từ giây phút đầu.<br><br>
+          Cũng có nét tương đồng như mì quảng, nhưng cao lầu được chế biến công phu hơn rất nhiều. Sợi mì của cao lầu bạn sẽ thấy nó có màu vàng rất bắt mắt, khi ăn có vị dai dai vừa phải.<br><br>
+          Khi ăn nên cho thêm một ít da heo hoặc cao lầu khô thái vuông đã chiên giòn vô ăn kèm mới ngon nhen. Bí quyết cả đấy, không thiếu được đâu nè.
+        </p>
+      </div>
+    </div>
+
+    <div class="post-img-center">
+      <img class="post-img" src="https://th.bing.com/th/id/OIP.Mhv42sxhhtf0DMYB6BELKwHaE6?rs=1&pid=ImgDetMain" alt="Cao Lầu">
+    </div>
+
+    <div class="place">
+      <div class="place-icon"><i class="fa-solid fa-drumstick-bite"></i></div>
+      <div class="place-content">
+        <h3>Bê thui cầu mống</h3>
+        <p>
+          Bê thui thì cũng chả có gì lạ, thế nhưng bê thui cầu mống lại hết sức đặc biệt. Món bê thui Cầu Mống này nổi tiếng nhờ hương vị đặc trưng và cách chế biến độc đáo mà cho dù có học lỏm cũng khó có thể làm giống được. Thiệt đấy, không tin bạn cứ thử, mơ mà được hehe.<br><br>
+          Vì sao món này “câu” được nhiều khách đến vậy? Nhìn kỹ nhé, sau khi miếng thịt được đưa ra khỏi lò bạn sẽ thấy rõ ràng hai tầng thịt tái và chín rõ rệt luôn, còn phần da thì chín đến độ trong suốt, lại giòn mềm vừa phải nữa.<br><br>
+          Món này còn ngon hết sảy bởi được chấm cùng loại nước chấm trên cả tuyệt vời, đó là mắm cá cơm được gạn lấy nước, hòa quyện cùng đường, ớt tỏi giã nhuyễn, cùng ít gừng và mè rang thơm vàng, đảm bảo ăn hoài không ngán luôn.
+        </p>
+      </div>
+    </div>
+
+    <div class="post-img-center">
+      <img class="post-img" src="https://th.bing.com/th/id/OIP.1CRKOorgnEjl13UUOcZwlQHaE8?rs=1&pid=ImgDetMain" alt="Bê thui cầu mống">
+    </div>
+
+    <div class="place">
+      <div class="place-icon"><i class="fa-solid fa-bacon"></i></div>
+      <div class="place-content">
+        <h3>Tré</h3>
+        <p>
+          Chỉ từ những nguyên liệu quen thuộc như thịt heo, da heo, cùng những gia vị mà căn bếp nào cũng có, lại có thể tạo ra một món ăn ngon đến độ làm người ta rỏ dãi lia lịa thế này, đó là món tré.<br><br>
+          Nghe tên thì lạ và rồi vị của nó cũng ngon đến lạ luôn nghen. Cắn một miếng là đã thấy ngay sự ngon lành giòn rụm của tai heo cùng vị của ớt, riềng và tỏi vừa cay vừa nồng. Cá với bạn là chỉ cần ăn một lần là nhớ suốt đời.
+        </p>
+      </div>
+    </div>
+
+    <div class="post-img-center">
+      <img class="post-img" src="https://th.bing.com/th/id/OIP.JSUySGPrmRxO-RolZKbiCgHaFS?rs=1&pid=ImgDetMain" alt="Tré">
+    </div>
+
+    <div class="place">
+      <div class="place-icon"><i class="fa-solid fa-shrimp"></i></div>
+      <div class="place-content">
+        <h3>Hải sản</h3>
+        <p>
+          Đến biển mà chẳng ăn hải sản thì coi như chuyến đi mất nửa phần rồi, giống như thức ăn quên dặm thêm mắm, nó nhạt thếch. Vậy nên, làm gì làm, nhất định phải ăn hải sản cho bằng được nhen.<br><br>
+          Một số món hải sản ngon “nhức nhối” recommend cho bạn như mực nướng muối ớt/sa tế, mực cơm, sò điệp nướng phô mai/mỡ hành, ốc, cua Huỳnh Đế, nghêu hấp sả, ghẹ, cúm núm…<br><br>
+          Kể sơ sơ thế chứ tới nơi đếm không xuể đâu, còn có nhiều con lạ lắm. Con nào con nấy tươi nên thịt chắc, ngọt nước thôi rồi.
+        </p>
+      </div>
+    </div>
+
+    <div class="post-img-center">
+      <img class="post-img" src="https://th.bing.com/th/id/OIP.Q-ZPjTeO4etqETlhSF_F1gHaEo?rs=1&pid=ImgDetMain" alt="Hải sản">
+    </div>
+
+    <div class="place">
+      <div class="place-icon"><i class="fa-solid fa-bowl-food"></i></div>
+      <div class="place-content">
+        <h3>Bánh Canh Ruộng</h3>
+        <p>
+          Tên kỳ ha? Là bánh canh nấu ngoài ruộng à? À cũng đúng một phần bạn ạ, kiểu trước đây khu bán bánh canh có rất nhiều ruộng nên người ta gọi là bánh canh ruộng cho dễ nhận biết ấy mà. Còn có cái tên ngộ ngộ khác nữa kìa, như là “bánh canh chờ” hay “bánh canh chực”.<br><br>
+          Chưa biết có ngon hay không nhưng nghe tên là muốn được đến trải nghiệm rồi nhỉ. Và chất lượng cũng sẽ khiến bạn hài lòng tuyệt đối. Từng con bánh canh mềm mại, dai và dài được tạo ra từ những loại gạo ngon nhất.<br><br>
+          Ăn cùng với đó là những cá chỉ vàng, cá lóc, hoặc cá ngừ được tẩm gia vị rồi nướng vừa phải, có chút nem và chả chiên nữa. Nước dùng bánh canh thì nóng hổi, sền sệt ăn đậm đà lắm, ngọt nhẹ rất là ngon.
+        </p>
+      </div>
+    </div>
+    <div class="post-img-center">
+      <img class="post-img" src="https://th.bing.com/th/id/R.a145543502bc535e375891f42f41bc65?rik=P0c59q5aaSmzsg&pid=ImgRaw&r=0" alt="Bánh Canh Ruộng">
+    </div>
+
+    <div class="highlight">
+      Danh sách món ngon Đà Nẵng dường như cứ dài bất tận ý, nhưng chỉ cần top 10 món ăn Đà Nẵng trên cũng đủ để bạn no căng rồi.
+    </div>
+  </div>
+</body>
+</html>
